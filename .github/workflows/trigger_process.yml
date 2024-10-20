@@ -61,17 +61,13 @@ jobs:
           meta = 'config.txt'
           sniff = 'domains.txt'
           output_file = 'blacklist.txt'
-
-            with open(meta, 'r') as f1:
+          with open(meta, 'r') as f1:
                lines1 = set(f1.readlines())
-            with open(sniff, 'r') as f2:
+          with open(sniff, 'r') as f2:
                lines2 = set(f2.readlines())
-     
-            merged_lines = lines1.union(lines2)
-
-            with open(output_file, 'w') as output:
-              output.writelines(merged_lines)        
-                  
+          merged_lines = lines1.union(lines2)
+          with open(output_file, 'w') as output:
+              output.writelines(merged_lines)
           EOF
           python process_domains.py
       - name: Move output files

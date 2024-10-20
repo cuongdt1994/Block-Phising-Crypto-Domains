@@ -52,15 +52,15 @@ jobs:
           # Write output to a text file
           os.makedirs('lists', exist_ok=True)
           os.makedirs('dist', exist_ok=True)
-          with open('dist/config.txt', 'w') as txt_file:
+          with open('config.txt', 'w') as txt_file:
                 for url in blacklist_urls:
                   txt_file.write(url + '\n')
-          with open('dist/domains.txt', 'w') as output_file:
+          with open('domains.txt', 'w') as output_file:
                 for url in domains_data:
                   output_file.write(url + '\n')
-          meta = 'dist/config.txt'
-          sniff = 'dist/domains.txt'
-          output_file = 'dist/blacklist.txt'
+          meta = 'config.txt'
+          sniff = 'domains.txt'
+          output_file = 'blacklist.txt'
 
             with open(meta, 'r') as f1:
                lines1 = set(f1.readlines())
@@ -76,7 +76,7 @@ jobs:
           python process_domains.py
       - name: Move output files
         run: |
-          mv dist/blacklist.txt lists/daily
+          mv blacklist.txt lists/daily
       - name: Clean up untracked files
         run: |
           rm -f domains.json process_domains.py config.json

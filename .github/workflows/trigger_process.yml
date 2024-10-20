@@ -41,7 +41,8 @@ jobs:
               data = json.load(file)
 
           # Write output to a text file
-          with open('domains.txt', 'w') as output_file:
+          os.makedirs('dist', exist_ok=True)
+          with open('dist/domains.txt', 'w') as output_file:
               for url in data:
                   output_file.write(f"0.0.0.0 {url}\n")
           EOF
@@ -51,4 +52,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Build
-          path: dist
+          path: dist/domains.txt

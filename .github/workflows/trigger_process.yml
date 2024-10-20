@@ -1,0 +1,56 @@
+name: Download and Process Domains
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  download-and-process:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      - name: Download domains file
+        run: |
+          import os
+          import json
+          import requests
+
+          # Download files from repo
+          url = 'https://raw.githubusercontent.com/scamsniffer/scam-database/refs/heads/main/blacklist/domains.json'
+          response = requests.get(url)
+          if response.status_code == 200:
+              with open('domains.json', 'wb') as json_file:
+                  json_file.write(response.content)
+
+      - name: Process domains file
+        run: |
+          import json
+
+          # Read and process JSON file
+          with open('domains.json', 'r') as file:
+              data = json.load(file)
+
+          # Write output to a text file
+          with open('domains.txt', 'w') as output_file:
+              for url in data:
+                  output_file.write(f"0.0.0.0 {url}\n")
+
+      - name: Upload results
+        uses: actions/upload-artifact@v2
+        with:
+          name: domains
+          path: domains.txt

@@ -51,7 +51,7 @@ jobs:
           os.makedirs('lists', exist_ok=True)
           os.makedirs('dist', exist_ok=True)
           with open('dist/config.txt', 'w') as output_file:
-            for url in blacklist:
+            for url in data:
               output_file.write(f"0.0.0.0 {url}\n")
           with open('dist/domains.txt', 'w') as output_file:
               for url in data:

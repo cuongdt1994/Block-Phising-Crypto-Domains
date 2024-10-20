@@ -59,4 +59,4 @@ jobs:
           git commit -m "Update Blocklist Phising Site Lists ($(date +'%Y-%m-%d'))"
           git push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TANA: ${{ secrets.GITHUB_TOKEN }}

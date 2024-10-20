@@ -52,28 +52,20 @@ jobs:
           os.makedirs('dist', exist_ok=True)
           with open('dist/config.txt', 'w') as output_file:
             for url in blacklist:
-              output_file.write(f"{url}\n")
+              output_file.write(f"0.0.0.0 {url}\n")
           with open('dist/domains.txt', 'w') as output_file:
               for url in data:
-                  #output_file.write(f"0.0.0.0 {url}\n")
-                  output_file.write(f"{url}\n")
-              #Merge domain
-          with open('dist/config.txt', 'r') as config_file:
-           config_domains = set(config_file.read().splitlines())
-          with open('dist/domains.txt', 'r') as domains_file:
-           domain_list = set(domains_file.read().splitlines())
-           merged_domains = config_domains.union(domain_list)
-           with open('dist/merged_domains.txt', 'w') as output_file:
-          for url in merged_domains:
-             output_file.write(url + '\n')
+                  output_file.write(f"0.0.0.0 {url}\n")
+                  
           EOF
           python process_domains.py
       - name: Move output files
         run: |
-          mv dist/merged_domains.txt lists/daily
+          mv dist/config.txt lists/daily
+          mv dist/domains.txt lists/daily
       - name: Clean up untracked files
         run: |
-          rm -f domains.json process_domains.py
+          rm -f domains.json process_domains.py config.json
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"

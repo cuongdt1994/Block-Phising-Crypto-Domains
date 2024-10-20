@@ -75,7 +75,7 @@ jobs:
           mv dist/blacklist.txt lists/daily
       - name: Clean up untracked files
         run: |
-          rm -f domains.json process_domains.py config.json dist
+          rm -f domains.json process_domains.py config.json
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"

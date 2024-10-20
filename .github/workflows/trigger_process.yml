@@ -52,15 +52,15 @@ jobs:
           # Write output to a text file
           os.makedirs('lists', exist_ok=True)
           os.makedirs('dist', exist_ok=True)
-          with open('config.txt', 'w') as txt_file:
+          with open('dist/config.txt', 'w') as txt_file:
                 for url in blacklist_urls:
                   txt_file.write(url + '\n')
-          with open('domains.txt', 'w') as output_file:
+          with open('dist/domains.txt', 'w') as output_file:
                 for url in domains_data:
                   output_file.write(url + '\n')
-          meta = 'config.txt'
-          sniff = 'domains.txt'
-          output_file = 'blacklist.txt'
+          meta = 'dist/config.txt'
+          sniff = 'dist/domains.txt'
+          output_file = 'dist/blacklist.txt'
           with open(meta, 'r') as f1:
                lines1 = set(f1.readlines())
           with open(sniff, 'r') as f2:
@@ -72,10 +72,10 @@ jobs:
           python process_domains.py
       - name: Move output files
         run: |
-          mv blacklist.txt lists/daily
+          mv dist/blacklist.txt lists/daily
       - name: Clean up untracked files
         run: |
-          rm -f domains.json process_domains.py config.json
+          rm -f domains.json process_domains.py config.json dist
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"

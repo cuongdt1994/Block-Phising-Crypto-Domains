@@ -30,26 +30,47 @@ jobs:
           import requests
 
           # Download files from repo
-          url = 'https://raw.githubusercontent.com/scamsniffer/scam-database/refs/heads/main/blacklist/domains.json'
-          response = requests.get(url)
+          scamsniffer = 'https://raw.githubusercontent.com/scamsniffer/scam-database/refs/heads/main/blacklist/domains.json'
+          response = requests.get(scamsniffer)
           if response.status_code == 200:
               with open('domains.json', 'wb') as json_file:
+                  json_file.write(response.content)
+          metammask = 'https://raw.githubusercontent.com/MetaMask/eth-phishing-detect/refs/heads/main/src/config.json'
+          response = requests.get(metammask)
+          if response.status_code == 200:
+              with open('config.json', 'wb') as json_file:
                   json_file.write(response.content)
           # Read and process JSON file
           with open('domains.json', 'r') as file:
               data = json.load(file)
-
+          with open('config.json', 'r') as json_file:
+              data = json.load(json_file)    
+          blacklist = data.get('blacklist', [])
+          
           # Write output to a text file
           os.makedirs('lists', exist_ok=True)
           os.makedirs('dist', exist_ok=True)
+          with open('dist/config.txt', 'w') as output_file:
+            for url in blacklist:
+              output_file.write(f"{url}\n"))
           with open('dist/domains.txt', 'w') as output_file:
               for url in data:
-                  output_file.write(f"0.0.0.0 {url}\n")
+                  #output_file.write(f"0.0.0.0 {url}\n")
+                  output_file.write(f"{url}\n")
+              #Merge domain
+          with open('dist/config.txt', 'r') as config_file:
+           config_domains = set(config_file.read().splitlines())
+          with open('dist/domains.txt', 'r') as domains_file:
+           domain_list = set(domains_file.read().splitlines())
+           merged_domains = config_domains.union(domain_list)
+           with open('dist/merged_domains.txt', 'w') as output_file:
+          for domain in merged_domains:
+             output_file.write(url + '\n')
           EOF
           python process_domains.py
       - name: Move output files
         run: |
-          mv dist/domains.txt lists/daily
+          mv dist/merged_domains.txt lists/daily
       - name: Clean up untracked files
         run: |
           rm -f domains.json process_domains.py

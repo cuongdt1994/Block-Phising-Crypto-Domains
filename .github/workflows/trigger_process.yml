@@ -41,15 +41,18 @@ jobs:
               data = json.load(file)
 
           # Write output to a text file
-          os.makedirs('dist', exist_ok=True)
-          with open('dist/domains.txt', 'w') as output_file:
+          with open('domains.txt', 'w') as output_file:
               for url in data:
                   output_file.write(f"0.0.0.0 {url}\n")
           EOF
           python process_domains.py
-
-      - name: Upload results
-        uses: actions/upload-artifact@v4
-        with:
-          name: Build
-          path: dist/domains.txt
+          
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add lists
+          git commit -m "Update Blocklist Phising Site Lists ($(date +'%Y-%m-%d'))"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

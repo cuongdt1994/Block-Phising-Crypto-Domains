@@ -45,7 +45,7 @@ jobs:
               data = json.load(file)
           with open('config.json', 'r') as json_file:
               data = json.load(json_file)    
-          blacklist = data.get('blacklist', [])
+          
           
           # Write output to a text file
           os.makedirs('lists', exist_ok=True)

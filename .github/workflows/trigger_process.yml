@@ -50,6 +50,9 @@ jobs:
       - name: Move output files
         run: |
           mv dist/domains.txt lists/daily
+      - name: Clean up untracked files
+        run: |
+          rm -f domains.json process_domains.py
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"

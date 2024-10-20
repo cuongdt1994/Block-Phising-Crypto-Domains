@@ -64,7 +64,7 @@ jobs:
            domain_list = set(domains_file.read().splitlines())
            merged_domains = config_domains.union(domain_list)
            with open('dist/merged_domains.txt', 'w') as output_file:
-          for domain in merged_domains:
+          for url in merged_domains:
              output_file.write(url + '\n')
           EOF
           python process_domains.py

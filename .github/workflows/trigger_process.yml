@@ -52,10 +52,10 @@ jobs:
           # Write output to a text file
           os.makedirs('lists', exist_ok=True)
           os.makedirs('dist', exist_ok=True)
-          with open('dist/config.txt, 'w') as output_file:
-            for url in blacklist_urls:
-                  output_file.write(url + '\n')
-          with open('dist/domains.txt', 'w') as output_file:
+          with open(dist/config.txt, 'w') as txt_file:
+              for url in blacklist_urls:
+                  txt_file.write(url + '\n')
+          with open('domains.txt', 'w') as output_file:
               for url in data:
                   output_file.write(f"0.0.0.0 {url}\n")
                   
@@ -63,8 +63,8 @@ jobs:
           python process_domains.py
       - name: Move output files
         run: |
-          mv dist/config.txt lists/daily
-          mv dist/domains.txt lists/daily
+          mv config.txt lists/daily
+          mv domains.txt lists/daily
       - name: Clean up untracked files
         run: |
           rm -f domains.json process_domains.py config.json

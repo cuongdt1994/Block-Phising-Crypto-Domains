@@ -37,9 +37,20 @@ jobs:
               return bool(re.match(domain_pattern, domain))
 
           def is_valid_ip(ip):
-              """Validate IP format"""
-              ip_pattern = r'^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$'
-              return bool(re.match(ip_pattern, ip))
+              """Validate IP format - improved version"""
+              try:
+                  parts = ip.split('.')
+                  if len(parts) != 4:
+                      return False
+                  for part in parts:
+                      if not part.isdigit():
+                          return False
+                      num = int(part)
+                      if num < 0 or num > 255:
+                          return False
+                  return True
+              except:
+                  return False
 
           def is_valid_url(url):
               """Validate URL format"""
@@ -129,27 +140,50 @@ jobs:
 
           # Download original sources
           print("Downloading original sources...")
-          scamsniffer = 'https://raw.githubusercontent.com/scamsniffer/scam-database/refs/heads/main/blacklist/domains.json'
-          response = requests.get(scamsniffer)
-          if response.status_code == 200:
-              with open('domains.json', 'wb') as json_file:
-                  json_file.write(response.content)
+          try:
+              scamsniffer = 'https://raw.githubusercontent.com/scamsniffer/scam-database/refs/heads/main/blacklist/domains.json'
+              response = requests.get(scamsniffer)
+              if response.status_code == 200:
+                  with open('domains.json', 'wb') as json_file:
+                      json_file.write(response.content)
+              else:
+                  print(f"Failed to download scamsniffer: {response.status_code}")
+          except Exception as e:
+              print(f"Error downloading scamsniffer: {e}")
 
-          metammask = 'https://raw.githubusercontent.com/MetaMask/eth-phishing-detect/refs/heads/main/src/config.json'
-          response = requests.get(metammask)
-          if response.status_code == 200:
-              with open('config.json', 'wb') as json_file:
-                  json_file.write(response.content)
+          try:
+              metammask = 'https://raw.githubusercontent.com/MetaMask/eth-phishing-detect/refs/heads/main/src/config.json'
+              response = requests.get(metammask)
+              if response.status_code == 200:
+                  with open('config.json', 'wb') as json_file:
+                      json_file.write(response.content)
+              else:
+                  print(f"Failed to download metamask: {response.status_code}")
+          except Exception as e:
+              print(f"Error downloading metamask: {e}")
 
           # Process original sources
           print("Processing original sources...")
-          with open('domains.json', 'r') as domains_file:
-              domains_data = json.load(domains_file)
-          with open('config.json', 'r') as config_file:
-              config_data = json.load(config_file)    
+          blacklist_urls = []
+          domains_data = []
 
-          blacklist_urls = config_data.get('blacklist', [])
-          
+          # Process domains.json if exists
+          if os.path.exists('domains.json'):
+              try:
+                  with open('domains.json', 'r') as domains_file:
+                      domains_data = json.load(domains_file)
+              except Exception as e:
+                  print(f"Error reading domains.json: {e}")
+
+          # Process config.json if exists
+          if os.path.exists('config.json'):
+              try:
+                  with open('config.json', 'r') as config_file:
+                      config_data = json.load(config_file)
+                  blacklist_urls = config_data.get('blacklist', [])
+              except Exception as e:
+                  print(f"Error reading config.json: {e}")
+
           # Create directories
           os.makedirs('lists', exist_ok=True)
           os.makedirs('dist', exist_ok=True)
@@ -165,21 +199,23 @@ jobs:
           print("Processing .intel sources...")
           for i, source in enumerate(intel_sources):
               print(f"Processing source {i+1}/{len(intel_sources)}: {source}")
-              indicators = process_intel_file(source)
-              all_indicators.update(indicators)
-              print(f"Added {len(indicators)} indicators from {source}")
+              try:
+                  indicators = process_intel_file(source)
+                  all_indicators.update(indicators)
+                  print(f"Added {len(indicators)} indicators from {source}")
+              except Exception as e:
+                  print(f"Error processing {source}: {e}")
 
           # Separate by type
           domains = set()
           ips = set()
           urls = set()
 
+          print("Separating indicators by type...")
           for indicator in all_indicators:
               if indicator:
                   indicator = indicator.strip()
-                  if is_valid_domain(indicator):
-                      domains.add(indicator)
-                  elif is_valid_ip(indicator):
+                  if is_valid_ip(indicator):
                       ips.add(indicator)
                   elif is_valid_url(indicator):
                       urls.add(indicator)
@@ -187,6 +223,8 @@ jobs:
                       domain = extract_domain_from_url(indicator)
                       if domain and is_valid_domain(domain):
                           domains.add(domain)
+                  elif is_valid_domain(indicator):
+                      domains.add(indicator)
 
           # Write separate files
           print("Writing output files...")

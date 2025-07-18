@@ -138,62 +138,46 @@ jobs:
               'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/shadowwhisperer-malware.intel'
           ]
 
-          # Download original sources
-          print("Downloading original sources...")
+          # Download and combine JSON sources
+          print("Downloading and processing JSON sources...")
+          all_json_data = []
+
+          # Download scamsniffer domains
           try:
-              scamsniffer = 'https://raw.githubusercontent.com/scamsniffer/scam-database/refs/heads/main/blacklist/domains.json'
-              response = requests.get(scamsniffer)
+              scamsniffer_url = 'https://raw.githubusercontent.com/scamsniffer/scam-database/refs/heads/main/blacklist/domains.json'
+              response = requests.get(scamsniffer_url)
               if response.status_code == 200:
-                  with open('domains.json', 'wb') as json_file:
-                      json_file.write(response.content)
+                  scamsniffer_data = response.json()
+                  all_json_data.extend(scamsniffer_data)
+                  print(f"Added {len(scamsniffer_data)} items from scamsniffer")
               else:
                   print(f"Failed to download scamsniffer: {response.status_code}")
           except Exception as e:
               print(f"Error downloading scamsniffer: {e}")
 
+          # Download metamask blacklist
           try:
-              metammask = 'https://raw.githubusercontent.com/MetaMask/eth-phishing-detect/refs/heads/main/src/config.json'
-              response = requests.get(metammask)
+              metamask_url = 'https://raw.githubusercontent.com/MetaMask/eth-phishing-detect/refs/heads/main/src/config.json'
+              response = requests.get(metamask_url)
               if response.status_code == 200:
-                  with open('config.json', 'wb') as json_file:
-                      json_file.write(response.content)
+                  metamask_data = response.json()
+                  blacklist_urls = metamask_data.get('blacklist', [])
+                  all_json_data.extend(blacklist_urls)
+                  print(f"Added {len(blacklist_urls)} items from metamask")
               else:
                   print(f"Failed to download metamask: {response.status_code}")
           except Exception as e:
               print(f"Error downloading metamask: {e}")
 
-          # Process original sources
-          print("Processing original sources...")
-          blacklist_urls = []
-          domains_data = []
-
-          # Process domains.json if exists
-          if os.path.exists('domains.json'):
-              try:
-                  with open('domains.json', 'r') as domains_file:
-                      domains_data = json.load(domains_file)
-              except Exception as e:
-                  print(f"Error reading domains.json: {e}")
-
-          # Process config.json if exists
-          if os.path.exists('config.json'):
-              try:
-                  with open('config.json', 'r') as config_file:
-                      config_data = json.load(config_file)
-                  blacklist_urls = config_data.get('blacklist', [])
-              except Exception as e:
-                  print(f"Error reading config.json: {e}")
-
           # Create directories
-          os.makedirs('lists', exist_ok=True)
           os.makedirs('dist', exist_ok=True)
 
           # Collect all indicators
           all_indicators = set()
           
-          # Add original sources
-          all_indicators.update(blacklist_urls)
-          all_indicators.update(domains_data)
+          # Add JSON sources
+          all_indicators.update(all_json_data)
+          print(f"Total from JSON sources: {len(all_json_data)}")
 
           # Process .intel sources
           print("Processing .intel sources...")
@@ -226,26 +210,25 @@ jobs:
                   elif is_valid_domain(indicator):
                       domains.add(indicator)
 
-          # Write separate files
+          # Write output files to dist directory
           print("Writing output files...")
+          
+          # Write domains
           with open('dist/domains.txt', 'w') as f:
               for domain in sorted(domains):
                   f.write(domain + '\n')
 
+          # Write IPs
           with open('dist/ips.txt', 'w') as f:
               for ip in sorted(ips):
                   f.write(ip + '\n')
 
+          # Write URLs
           with open('dist/urls.txt', 'w') as f:
               for url in sorted(urls):
                   f.write(url + '\n')
 
-          # Create combined blacklist
-          with open('dist/blacklist.txt', 'w') as f:
-              for item in sorted(all_indicators):
-                  if item and item.strip():
-                      f.write(item.strip() + '\n')
-
+          print(f"=== PROCESSING COMPLETE ===")
           print(f"Total indicators processed: {len(all_indicators)}")
           print(f"Domains: {len(domains)}")
           print(f"IPs: {len(ips)}")
@@ -254,25 +237,25 @@ jobs:
           EOF
           python process_domains.py
 
-      - name: Move output files
+      - name: Move output files to lists directory
         run: |
-          mv dist/blacklist.txt lists/daily
+          mkdir -p lists
           mv dist/domains.txt lists/domains
           mv dist/ips.txt lists/ips
           mv dist/urls.txt lists/urls
 
-      - name: Clean up untracked files
+      - name: Clean up temporary files
         run: |
-          rm -f domains.json process_domains.py config.json
+          rm -f process_domains.py
           rm -rf dist/
 
       - name: Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add lists
+          git add lists/
           if ! git diff --cached --quiet; then
-             git commit -m "Update Blocklist Phishing Site Lists ($(date +'%Y-%m-%d'))"
+             git commit -m "Update Blocklist: $(date +'%Y-%m-%d %H:%M:%S')"
              git push
           else
             echo "No changes to commit."

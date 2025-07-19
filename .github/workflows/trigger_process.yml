@@ -31,6 +31,9 @@ jobs:
           import re
           from urllib.parse import urlparse
 
+          # Cloudflare DNS IPs to exclude
+          EXCLUDED_IPS = {'1.1.1.1', '1.0.0.1'}
+
           def is_valid_domain(domain):
               """Validate domain format"""
               domain_pattern = r'^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)*[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?$'
@@ -87,7 +90,7 @@ jobs:
                                       if is_valid_domain(indicator):
                                           indicators.append(indicator)
                                   elif indicator_type == 'Intel::ADDR':
-                                      if is_valid_ip(indicator):
+                                      if is_valid_ip(indicator) and indicator not in EXCLUDED_IPS:
                                           indicators.append(indicator)
                                   elif indicator_type == 'Intel::URL':
                                       if is_valid_url(indicator):
@@ -199,7 +202,7 @@ jobs:
           for indicator in all_indicators:
               if indicator:
                   indicator = indicator.strip()
-                  if is_valid_ip(indicator):
+                  if is_valid_ip(indicator) and indicator not in EXCLUDED_IPS:
                       ips.add(indicator)
                   elif is_valid_url(indicator):
                       urls.add(indicator)
@@ -218,10 +221,11 @@ jobs:
               for domain in sorted(domains):
                   f.write(domain + '\n')
 
-          # Write IPs
+          # Write IPs (excluding Cloudflare DNS IPs)
           with open('dist/ips.txt', 'w') as f:
               for ip in sorted(ips):
-                  f.write(ip + '\n')
+                  if ip not in EXCLUDED_IPS:
+                      f.write(ip + '\n')
 
           # Write URLs
           with open('dist/urls.txt', 'w') as f:
@@ -231,7 +235,7 @@ jobs:
           print(f"=== PROCESSING COMPLETE ===")
           print(f"Total indicators processed: {len(all_indicators)}")
           print(f"Domains: {len(domains)}")
-          print(f"IPs: {len(ips)}")
+          print(f"IPs: {len(ips)} (excluded Cloudflare DNS IPs: {EXCLUDED_IPS})")
           print(f"URLs: {len(urls)}")
 
           EOF

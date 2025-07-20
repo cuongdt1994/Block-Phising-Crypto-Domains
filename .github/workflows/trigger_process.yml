@@ -34,6 +34,12 @@ jobs:
           # Cloudflare DNS IPs to exclude
           EXCLUDED_IPS = {'1.1.1.1', '1.0.0.1'}
 
+          # Domains to exclude
+          EXCLUDED_DOMAINS = {
+              'raw.githubusercontent.com',
+              'gist.githubusercontent.com'
+          }
+
           def is_valid_domain(domain):
               """Validate domain format"""
               domain_pattern = r'^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)*[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?$'
@@ -87,7 +93,7 @@ jobs:
                                   
                                   # Process based on indicator type
                                   if indicator_type == 'Intel::DOMAIN':
-                                      if is_valid_domain(indicator):
+                                      if is_valid_domain(indicator) and indicator not in EXCLUDED_DOMAINS:
                                           indicators.append(indicator)
                                   elif indicator_type == 'Intel::ADDR':
                                       if is_valid_ip(indicator) and indicator not in EXCLUDED_IPS:
@@ -97,7 +103,7 @@ jobs:
                                           indicators.append(indicator)
                                           # Also extract domain from URL
                                           domain = extract_domain_from_url(indicator)
-                                          if domain and is_valid_domain(domain):
+                                          if domain and is_valid_domain(domain) and domain not in EXCLUDED_DOMAINS:
                                               indicators.append(domain)
               except Exception as e:
                   print(f"Error processing {url}: {e}")
@@ -151,8 +157,10 @@ jobs:
               response = requests.get(scamsniffer_url)
               if response.status_code == 200:
                   scamsniffer_data = response.json()
-                  all_json_data.extend(scamsniffer_data)
-                  print(f"Added {len(scamsniffer_data)} items from scamsniffer")
+                  # Filter out excluded domains
+                  filtered_data = [domain for domain in scamsniffer_data if domain not in EXCLUDED_DOMAINS]
+                  all_json_data.extend(filtered_data)
+                  print(f"Added {len(filtered_data)} items from scamsniffer (excluded {len(scamsniffer_data) - len(filtered_data)} domains)")
               else:
                   print(f"Failed to download scamsniffer: {response.status_code}")
           except Exception as e:
@@ -165,8 +173,10 @@ jobs:
               if response.status_code == 200:
                   metamask_data = response.json()
                   blacklist_urls = metamask_data.get('blacklist', [])
-                  all_json_data.extend(blacklist_urls)
-                  print(f"Added {len(blacklist_urls)} items from metamask")
+                  # Filter out excluded domains
+                  filtered_urls = [url for url in blacklist_urls if url not in EXCLUDED_DOMAINS]
+                  all_json_data.extend(filtered_urls)
+                  print(f"Added {len(filtered_urls)} items from metamask (excluded {len(blacklist_urls) - len(filtered_urls)} domains)")
               else:
                   print(f"Failed to download metamask: {response.status_code}")
           except Exception as e:
@@ -178,7 +188,7 @@ jobs:
           # Collect all indicators
           all_indicators = set()
           
-          # Add JSON sources
+          # Add JSON sources (already filtered)
           all_indicators.update(all_json_data)
           print(f"Total from JSON sources: {len(all_json_data)}")
 
@@ -208,9 +218,9 @@ jobs:
                       urls.add(indicator)
                       # Also extract domain from URL
                       domain = extract_domain_from_url(indicator)
-                      if domain and is_valid_domain(domain):
+                      if domain and is_valid_domain(domain) and domain not in EXCLUDED_DOMAINS:
                           domains.add(domain)
-                  elif is_valid_domain(indicator):
+                  elif is_valid_domain(indicator) and indicator not in EXCLUDED_DOMAINS:
                       domains.add(indicator)
 
           # Write output files to dist directory
@@ -234,7 +244,7 @@ jobs:
 
           print(f"=== PROCESSING COMPLETE ===")
           print(f"Total indicators processed: {len(all_indicators)}")
-          print(f"Domains: {len(domains)}")
+          print(f"Domains: {len(domains)} (excluded domains: {EXCLUDED_DOMAINS})")
           print(f"IPs: {len(ips)} (excluded Cloudflare DNS IPs: {EXCLUDED_IPS})")
           print(f"URLs: {len(urls)}")
 

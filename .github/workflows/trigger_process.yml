@@ -38,7 +38,8 @@ jobs:
           EXCLUDED_DOMAINS = {
               'raw.githubusercontent.com',
               'gist.githubusercontent.com',
-              's3.us-east-2.amazonaws.com'
+              's3.us-east-2.amazonaws.com',
+              'cdn.discordapp.com'
           }
 
           def is_valid_domain(domain):

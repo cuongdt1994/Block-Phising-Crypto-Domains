@@ -63,14 +63,6 @@ jobs:
               except:
                   return False
 
-          def is_valid_url(url):
-              """Validate URL format"""
-              try:
-                  result = urlparse(url)
-                  return all([result.scheme, result.netloc])
-              except:
-                  return False
-
           def extract_domain_from_url(url):
               """Extract domain from URL"""
               try:
@@ -100,6 +92,19 @@ jobs:
               
               return ips
 
+          def remove_duplicates_and_report(items, item_type):
+              """Remove duplicates from list and report statistics"""
+              original_count = len(items)
+              unique_items = list(set(items))
+              duplicates_removed = original_count - len(unique_items)
+              
+              if duplicates_removed > 0:
+                  print(f"Removed {duplicates_removed} duplicate {item_type}(s)")
+              else:
+                  print(f"No duplicates found in {item_type}s")
+              
+              return unique_items
+
           # List of IPsum sources (levels 1-8)
           ipsum_sources = [
               'https://raw.githubusercontent.com/stamparm/ipsum/refs/heads/master/levels/1.txt',
@@ -115,10 +120,9 @@ jobs:
           # Create directories
           os.makedirs('dist', exist_ok=True)
 
-          # Initialize sets for different types of indicators
-          domains = set()
-          ips = set()
-          urls = set()
+          # Initialize lists for different types of indicators
+          domains_list = []
+          ips_list = []
 
           # Download and process JSON sources for domains
           print("=== PROCESSING JSON SOURCES FOR DOMAINS ===")
@@ -132,8 +136,8 @@ jobs:
                   scamsniffer_data = response.json()
                   for domain in scamsniffer_data:
                       if domain and domain not in EXCLUDED_DOMAINS and is_valid_domain(domain):
-                          domains.add(domain)
-                  print(f"Added {len([d for d in scamsniffer_data if d not in EXCLUDED_DOMAINS])} domains from scamsniffer")
+                          domains_list.append(domain)
+                  print(f"Added {len([d for d in scamsniffer_data if d and d not in EXCLUDED_DOMAINS and is_valid_domain(d)])} domains from scamsniffer")
               else:
                   print(f"Failed to download scamsniffer: HTTP {response.status_code}")
           except Exception as e:
@@ -146,19 +150,19 @@ jobs:
               response = requests.get(metamask_url, timeout=30)
               if response.status_code == 200:
                   metamask_data = response.json()
-                  blacklist_urls = metamask_data.get('blacklist', [])
-                  for item in blacklist_urls:
+                  blacklist_items = metamask_data.get('blacklist', [])
+                  for item in blacklist_items:
                       if item:
                           item = item.strip()
-                          if is_valid_url(item):
-                              urls.add(item)
-                              # Extract domain from URL
+                          # If it's a URL, extract domain from it
+                          if item.startswith('http://') or item.startswith('https://'):
                               domain = extract_domain_from_url(item)
                               if domain and is_valid_domain(domain) and domain not in EXCLUDED_DOMAINS:
-                                  domains.add(domain)
+                                  domains_list.append(domain)
+                          # If it's a domain, add it directly
                           elif is_valid_domain(item) and item not in EXCLUDED_DOMAINS:
-                              domains.add(item)
-                  print(f"Added {len(blacklist_urls)} items from metamask")
+                              domains_list.append(item)
+                  print(f"Processed {len(blacklist_items)} items from metamask")
               else:
                   print(f"Failed to download metamask: HTTP {response.status_code}")
           except Exception as e:
@@ -172,40 +176,43 @@ jobs:
               print(f"Processing IPsum level {level}...")
               try:
                   level_ips = process_ipsum_file(source)
-                  ips.update(level_ips)
+                  ips_list.extend(level_ips)
                   total_ipsum_ips += len(level_ips)
                   print(f"Added {len(level_ips)} IPs from level {level}")
               except Exception as e:
                   print(f"Error processing level {level}: {e}")
 
+          # Remove duplicates and get statistics
+          print("=== REMOVING DUPLICATES ===")
+          unique_domains = remove_duplicates_and_report(domains_list, "domain")
+          unique_ips = remove_duplicates_and_report(ips_list, "IP")
+
+          # Sort the unique lists
+          unique_domains.sort()
+          unique_ips.sort()
+
           # Write output files to dist directory
           print("=== WRITING OUTPUT FILES ===")
           
           # Write domains
-          domains_list = sorted(list(domains))
           with open('dist/domains.txt', 'w') as f:
-              for domain in domains_list:
+              for domain in unique_domains:
                   f.write(domain + '\n')
-          print(f"Written {len(domains_list)} domains to domains.txt")
+          print(f"Written {len(unique_domains)} unique domains to domains.txt")
 
           # Write IPs
-          ips_list = sorted(list(ips))
           with open('dist/ips.txt', 'w') as f:
-              for ip in ips_list:
+              for ip in unique_ips:
                   f.write(ip + '\n')
-          print(f"Written {len(ips_list)} IPs to ips.txt")
-
-          # Write URLs
-          urls_list = sorted(list(urls))
-          with open('dist/urls.txt', 'w') as f:
-              for url in urls_list:
-                  f.write(url + '\n')
-          print(f"Written {len(urls_list)} URLs to urls.txt")
+          print(f"Written {len(unique_ips)} unique IPs to ips.txt")
 
           print(f"=== PROCESSING COMPLETE ===")
-          print(f"Total Domains: {len(domains_list)}")
-          print(f"Total IPs: {len(ips_list)} (from IPsum: {total_ipsum_ips})")
-          print(f"Total URLs: {len(urls_list)}")
+          print(f"=== DUPLICATE REMOVAL SUMMARY ===")
+          print(f"Domains: {len(domains_list)} → {len(unique_domains)} (removed {len(domains_list) - len(unique_domains)} duplicates)")
+          print(f"IPs: {len(ips_list)} → {len(unique_ips)} (removed {len(ips_list) - len(unique_ips)} duplicates)")
+          print(f"=== FINAL COUNTS ===")
+          print(f"Total unique Domains: {len(unique_domains)}")
+          print(f"Total unique IPs: {len(unique_ips)}")
           print(f"Excluded domains: {EXCLUDED_DOMAINS}")
           print(f"Excluded IPs: {EXCLUDED_IPS}")
 
@@ -217,7 +224,6 @@ jobs:
           mkdir -p lists
           mv dist/domains.txt lists/domains
           mv dist/ips.txt lists/ips
-          mv dist/urls.txt lists/urls
 
       - name: Clean up temporary files
         run: |

@@ -48,7 +48,7 @@ jobs:
               return bool(re.match(domain_pattern, domain))
 
           def is_valid_ip(ip):
-              """Validate IP format - improved version"""
+              """Validate IP format"""
               try:
                   parts = ip.split('.')
                   if len(parts) != 4:
@@ -79,176 +79,135 @@ jobs:
               except:
                   return None
 
-          def process_intel_file(url):
-              """Process .intel file and extract indicators"""
-              indicators = []
+          def process_ipsum_file(url):
+              """Process IPsum file and extract IP addresses"""
+              ips = []
               try:
+                  print(f"Downloading from: {url}")
                   response = requests.get(url, timeout=30)
                   if response.status_code == 200:
                       lines = response.text.strip().split('\n')
                       for line in lines:
-                          if line.strip() and not line.startswith('#'):
-                              parts = line.split('\t')
-                              if len(parts) >= 2:
-                                  indicator = parts[0].strip()
-                                  indicator_type = parts[1].strip()
-                                  
-                                  # Process based on indicator type
-                                  if indicator_type == 'Intel::DOMAIN':
-                                      if is_valid_domain(indicator) and indicator not in EXCLUDED_DOMAINS:
-                                          indicators.append(indicator)
-                                  elif indicator_type == 'Intel::ADDR':
-                                      if is_valid_ip(indicator) and indicator not in EXCLUDED_IPS:
-                                          indicators.append(indicator)
-                                  elif indicator_type == 'Intel::URL':
-                                      if is_valid_url(indicator):
-                                          indicators.append(indicator)
-                                          # Also extract domain from URL
-                                          domain = extract_domain_from_url(indicator)
-                                          if domain and is_valid_domain(domain) and domain not in EXCLUDED_DOMAINS:
-                                              indicators.append(domain)
+                          line = line.strip()
+                          if line and not line.startswith('#') and not line.startswith('//'):
+                              # IPsum files contain one IP per line
+                              if is_valid_ip(line) and line not in EXCLUDED_IPS:
+                                  ips.append(line)
+                  else:
+                      print(f"Failed to download {url}: HTTP {response.status_code}")
               except Exception as e:
                   print(f"Error processing {url}: {e}")
               
-              return indicators
+              return ips
 
-          # List of .intel sources
-          intel_sources = [
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/Amnesty_NSO_Domains.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/abuse-ch-threatfox-ip.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/abuse-ch-ipblocklist.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/abuse-ch-urlhaus.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/alienvault.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/atomspam.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/binarydefense.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/censys.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/cloudzy.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/cobaltstrike_ips.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/compromised-ips.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/cps-collected-iocs.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/drb_ra_domain.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/drb_ra_ip.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/drb_ra_ip_unverified.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/fangxiao.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/gru-aa25.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/illuminate.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/inversion.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/james-inthe-box.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/lockbit_ip.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/log4j_ip.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/mirai.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/openphish.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/predict_intel.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/ragnar.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/rutgers.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/sans.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/sip.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/stalkerware.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/tor-exit.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/tweetfeed.intel',
-              'https://raw.githubusercontent.com/CriticalPathSecurity/Zeek-Intelligence-Feeds/refs/heads/master/shadowwhisperer-malware.intel'
+          # List of IPsum sources (levels 1-8)
+          ipsum_sources = [
+              'https://raw.githubusercontent.com/stamparm/ipsum/refs/heads/master/levels/1.txt',
+              'https://raw.githubusercontent.com/stamparm/ipsum/refs/heads/master/levels/2.txt',
+              'https://raw.githubusercontent.com/stamparm/ipsum/refs/heads/master/levels/3.txt',
+              'https://raw.githubusercontent.com/stamparm/ipsum/refs/heads/master/levels/4.txt',
+              'https://raw.githubusercontent.com/stamparm/ipsum/refs/heads/master/levels/5.txt',
+              'https://raw.githubusercontent.com/stamparm/ipsum/refs/heads/master/levels/6.txt',
+              'https://raw.githubusercontent.com/stamparm/ipsum/refs/heads/master/levels/7.txt',
+              'https://raw.githubusercontent.com/stamparm/ipsum/refs/heads/master/levels/8.txt'
           ]
 
-          # Download and combine JSON sources
-          print("Downloading and processing JSON sources...")
-          all_json_data = []
+          # Create directories
+          os.makedirs('dist', exist_ok=True)
 
+          # Initialize sets for different types of indicators
+          domains = set()
+          ips = set()
+          urls = set()
+
+          # Download and process JSON sources for domains
+          print("=== PROCESSING JSON SOURCES FOR DOMAINS ===")
+          
           # Download scamsniffer domains
           try:
+              print("Processing scamsniffer domains...")
               scamsniffer_url = 'https://raw.githubusercontent.com/scamsniffer/scam-database/refs/heads/main/blacklist/domains.json'
-              response = requests.get(scamsniffer_url)
+              response = requests.get(scamsniffer_url, timeout=30)
               if response.status_code == 200:
                   scamsniffer_data = response.json()
-                  # Filter out excluded domains
-                  filtered_data = [domain for domain in scamsniffer_data if domain not in EXCLUDED_DOMAINS]
-                  all_json_data.extend(filtered_data)
-                  print(f"Added {len(filtered_data)} items from scamsniffer (excluded {len(scamsniffer_data) - len(filtered_data)} domains)")
+                  for domain in scamsniffer_data:
+                      if domain and domain not in EXCLUDED_DOMAINS and is_valid_domain(domain):
+                          domains.add(domain)
+                  print(f"Added {len([d for d in scamsniffer_data if d not in EXCLUDED_DOMAINS])} domains from scamsniffer")
               else:
-                  print(f"Failed to download scamsniffer: {response.status_code}")
+                  print(f"Failed to download scamsniffer: HTTP {response.status_code}")
           except Exception as e:
               print(f"Error downloading scamsniffer: {e}")
 
           # Download metamask blacklist
           try:
+              print("Processing metamask blacklist...")
               metamask_url = 'https://raw.githubusercontent.com/MetaMask/eth-phishing-detect/refs/heads/main/src/config.json'
-              response = requests.get(metamask_url)
+              response = requests.get(metamask_url, timeout=30)
               if response.status_code == 200:
                   metamask_data = response.json()
                   blacklist_urls = metamask_data.get('blacklist', [])
-                  # Filter out excluded domains
-                  filtered_urls = [url for url in blacklist_urls if url not in EXCLUDED_DOMAINS]
-                  all_json_data.extend(filtered_urls)
-                  print(f"Added {len(filtered_urls)} items from metamask (excluded {len(blacklist_urls) - len(filtered_urls)} domains)")
+                  for item in blacklist_urls:
+                      if item:
+                          item = item.strip()
+                          if is_valid_url(item):
+                              urls.add(item)
+                              # Extract domain from URL
+                              domain = extract_domain_from_url(item)
+                              if domain and is_valid_domain(domain) and domain not in EXCLUDED_DOMAINS:
+                                  domains.add(domain)
+                          elif is_valid_domain(item) and item not in EXCLUDED_DOMAINS:
+                              domains.add(item)
+                  print(f"Added {len(blacklist_urls)} items from metamask")
               else:
-                  print(f"Failed to download metamask: {response.status_code}")
+                  print(f"Failed to download metamask: HTTP {response.status_code}")
           except Exception as e:
               print(f"Error downloading metamask: {e}")
 
-          # Create directories
-          os.makedirs('dist', exist_ok=True)
-
-          # Collect all indicators
-          all_indicators = set()
-          
-          # Add JSON sources (already filtered)
-          all_indicators.update(all_json_data)
-          print(f"Total from JSON sources: {len(all_json_data)}")
-
-          # Process .intel sources
-          print("Processing .intel sources...")
-          for i, source in enumerate(intel_sources):
-              print(f"Processing source {i+1}/{len(intel_sources)}: {source}")
+          # Process IPsum sources for IPs
+          print("=== PROCESSING IPSUM SOURCES FOR IPs ===")
+          total_ipsum_ips = 0
+          for i, source in enumerate(ipsum_sources):
+              level = i + 1
+              print(f"Processing IPsum level {level}...")
               try:
-                  indicators = process_intel_file(source)
-                  all_indicators.update(indicators)
-                  print(f"Added {len(indicators)} indicators from {source}")
+                  level_ips = process_ipsum_file(source)
+                  ips.update(level_ips)
+                  total_ipsum_ips += len(level_ips)
+                  print(f"Added {len(level_ips)} IPs from level {level}")
               except Exception as e:
-                  print(f"Error processing {source}: {e}")
-
-          # Separate by type
-          domains = set()
-          ips = set()
-          urls = set()
-
-          print("Separating indicators by type...")
-          for indicator in all_indicators:
-              if indicator:
-                  indicator = indicator.strip()
-                  if is_valid_ip(indicator) and indicator not in EXCLUDED_IPS:
-                      ips.add(indicator)
-                  elif is_valid_url(indicator):
-                      urls.add(indicator)
-                      # Also extract domain from URL
-                      domain = extract_domain_from_url(indicator)
-                      if domain and is_valid_domain(domain) and domain not in EXCLUDED_DOMAINS:
-                          domains.add(domain)
-                  elif is_valid_domain(indicator) and indicator not in EXCLUDED_DOMAINS:
-                      domains.add(indicator)
+                  print(f"Error processing level {level}: {e}")
 
           # Write output files to dist directory
-          print("Writing output files...")
+          print("=== WRITING OUTPUT FILES ===")
           
           # Write domains
+          domains_list = sorted(list(domains))
           with open('dist/domains.txt', 'w') as f:
-              for domain in sorted(domains):
+              for domain in domains_list:
                   f.write(domain + '\n')
+          print(f"Written {len(domains_list)} domains to domains.txt")
 
-          # Write IPs (excluding Cloudflare DNS IPs)
+          # Write IPs
+          ips_list = sorted(list(ips))
           with open('dist/ips.txt', 'w') as f:
-              for ip in sorted(ips):
-                  if ip not in EXCLUDED_IPS:
-                      f.write(ip + '\n')
+              for ip in ips_list:
+                  f.write(ip + '\n')
+          print(f"Written {len(ips_list)} IPs to ips.txt")
 
           # Write URLs
+          urls_list = sorted(list(urls))
           with open('dist/urls.txt', 'w') as f:
-              for url in sorted(urls):
+              for url in urls_list:
                   f.write(url + '\n')
+          print(f"Written {len(urls_list)} URLs to urls.txt")
 
           print(f"=== PROCESSING COMPLETE ===")
-          print(f"Total indicators processed: {len(all_indicators)}")
-          print(f"Domains: {len(domains)} (excluded domains: {EXCLUDED_DOMAINS})")
-          print(f"IPs: {len(ips)} (excluded Cloudflare DNS IPs: {EXCLUDED_IPS})")
-          print(f"URLs: {len(urls)}")
+          print(f"Total Domains: {len(domains_list)}")
+          print(f"Total IPs: {len(ips_list)} (from IPsum: {total_ipsum_ips})")
+          print(f"Total URLs: {len(urls_list)}")
+          print(f"Excluded domains: {EXCLUDED_DOMAINS}")
+          print(f"Excluded IPs: {EXCLUDED_IPS}")
 
           EOF
           python process_domains.py

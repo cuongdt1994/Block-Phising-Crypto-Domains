@@ -168,6 +168,31 @@ jobs:
           except Exception as e:
               print(f"Error downloading metamask: {e}")
 
+          # Download Polkadot.js phishing list
+          try:
+              print("Processing Polkadot.js phishing list...")
+              polkadot_url = 'https://polkadot.js.org/phishing/all.json'
+              response = requests.get(polkadot_url, timeout=30)
+              if response.status_code == 200:
+                  polkadot_data = response.json()
+                  deny_list = polkadot_data.get('deny', [])
+                  for item in deny_list:
+                      if item:
+                          item = item.strip()
+                          # If it's a URL, extract domain from it
+                          if item.startswith('http://') or item.startswith('https://'):
+                              domain = extract_domain_from_url(item)
+                              if domain and is_valid_domain(domain) and domain not in EXCLUDED_DOMAINS:
+                                  domains_list.append(domain)
+                          # If it's a domain, add it directly
+                          elif is_valid_domain(item) and item not in EXCLUDED_DOMAINS:
+                              domains_list.append(item)
+                  print(f"Added {len([d for d in deny_list if d and is_valid_domain(d.strip()) and d.strip() not in EXCLUDED_DOMAINS])} domains from Polkadot.js")
+              else:
+                  print(f"Failed to download Polkadot.js phishing list: HTTP {response.status_code}")
+          except Exception as e:
+              print(f"Error downloading Polkadot.js phishing list: {e}")
+
           # Process IPsum sources for IPs
           print("=== PROCESSING IPSUM SOURCES FOR IPs ===")
           total_ipsum_ips = 0

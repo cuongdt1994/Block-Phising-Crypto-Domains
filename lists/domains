@@ -12542,7 +12542,6 @@ agent.kra37--cc.cc
 agent.kra43--at.cc
 agent.kra45--at.cc
 agent.krab10-at.cc
-agent.krab10-cc.cc
 agent.krab15-at.cc
 agent.krab16-at.cc
 agent.krab18-cc.cc
@@ -39004,6 +39003,7 @@ apps-ext-basecdn.wixstudio.com
 apps-ext-koinbase.wixstudio.com
 apps-extension.wixstudio.com
 apps-extensions-base.wixstudio.com
+apps-extmetmaskweb.wixstudio.com
 apps-extnsion-base.wixstudio.com
 apps-fightout.com
 apps-firelight.xyz
@@ -44294,6 +44294,7 @@ asset-kelpdao.com
 asset-kelpdao.net
 asset-kelpdao.org
 asset-kelpdao.xyz
+asset-kraken.wixstudio.com
 asset-ledger-app-45w.pages.dev
 asset-lido.com
 asset-lido.org
@@ -68701,10 +68702,8 @@ bot.kra--29at.net
 bot.kra--31-at.cc
 bot.kra-26-cc.cc
 bot.kra-28-cc.cc
-bot.kra-32--at.cc
 bot.kra-37-cc.cc
 bot.kra-38-cc.cc
-bot.kra-43-at.cc
 bot.kra-44-at.cc
 bot.kra-45cc.cc
 bot.kra-46-cc.cc
@@ -92282,6 +92281,7 @@ claim.modenetworks.network
 claim.mogscoin.live
 claim.mollars.co
 claim.monad-network.com
+claim.monad-portal.app
 claim.monad.cx
 claim.monadairdop.xyz
 claim.monadcoin.net
@@ -131698,7 +131698,6 @@ dev.event-metis.io
 dev.forum.vertex.joinweb-3.com
 dev.ftp.ns2.login.mailin.gabrielpabo.com
 dev.gpt.blancheroberts.com
-dev.kra-46cc.cc
 dev.krab-8at.cc
 dev.krab-9at.cc
 dev.krab16-at.cc
@@ -212561,6 +212560,7 @@ krakexx.com
 krakeynlogiin.webflow.io
 krakfenlogibn.webflow.io
 krakienlogon.gitbook.io
+krakin-apps.wixstudio.com
 krakin.com-platform.info
 krakin.io
 krakinlogkun.webflow.io
@@ -212608,6 +212608,7 @@ kraksupport-cc.pages.dev
 kraksupport.cc
 kraktg.abvdk.cn
 krakuniloganz.gitbook.io
+krakunprologin.wixstudio.com
 krakusiiinlogin.webflow.io
 krakv.abvdk.cn
 krakvipotc.com
@@ -212678,6 +212679,7 @@ kreaterland.com
 kreativekites.com
 kreatorland.io
 krec.in
+krecken-assets.wixstudio.com
 kreekn-login.pages.dev
 kreels-cc.pages.dev
 kreepz.app
@@ -240565,6 +240567,7 @@ metamask-app.servebeer.com
 metamask-app.site
 metamask-app24-kyc.com
 metamask-apple.com
+metamask-apps.wixstudio.com
 metamask-assets.com
 metamask-assets.free-gifts-app-network.eu.org
 metamask-auth.com
@@ -241607,6 +241610,7 @@ metamask.io.merge.wilsontoursafrica.com
 metamask.io.merge.yekshahr.ir
 metamask.io.moveaps.com
 metamask.io.nasheedfm.com
+metamask.io.pizzafat.site
 metamask.io.polyclinic55.kz
 metamask.io.pt-umi.co.id
 metamask.io.shibatokenhub.com
@@ -352065,6 +352069,7 @@ sign-in-extranets.com
 sign-in.myaccount-wallet.settings-coinbase.asfdbhgdfqe2e.com
 sign-incoinbase.gitbook.io
 sign-incoinbaseus.gitbook.io
+sign-kraken.wixstudio.com
 sign-ledger.com
 sign-ledger.help
 sign-ledger.net
@@ -375710,8 +375715,10 @@ support-joyce.ebayamazoon.com
 support-kraken-com-19t.pages.dev
 support-kraken-doc.wixstudio.com
 support-kraken.wixstudio.com
+support-krakenpro.wixstudio.com
 support-krakne.wixstudio.com
 support-kraknelogin.wixstudio.com
+support-krakunlogin.wixstudio.com
 support-krkenapps.wixstudio.com
 support-krraken.wixstudio.com
 support-layerzero.network
@@ -410960,6 +410967,7 @@ userlogins-x.online
 userlogins-x.xyz
 usermainnet.site
 usermantatokenet.icu
+usermetamaskcdn.wixstudio.com
 usernamebase.tech
 usernode.org
 usernodeauthorization.com

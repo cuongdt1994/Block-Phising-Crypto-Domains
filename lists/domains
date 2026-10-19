@@ -1014,12 +1014,14 @@
 1-allocation-abstract.pages.dev
 1-allocation-arcus.pages.dev
 1-allocation-argus.pages.dev
+1-allocation-deltaliquidity.pages.dev
 1-allocation-yieldfields.pages.dev
 1-allocation-zipcoin.pages.dev
 1-allocations-abs.pages.dev
 1-allowlist-ascendlaunch.pages.dev
 1-app-argus.pages.dev
 1-app-ethos.pages.dev
+1-app-pools.pages.dev
 1-app-zama.pages.dev
 1-arcuseco-event.pages.dev
 1-arcuseco.pages.dev
@@ -1066,8 +1068,10 @@
 1-gov-ramses.pages.dev
 1-governance-kinetiq.pages.dev
 1-governance-papertrade.pages.dev
+1-governance-papertradexyz.pages.dev
 1-governance-ponsfamily.pages.dev
 1-hub-arcustrade.pages.dev
+1-hub-usefelix.pages.dev
 1-hyperlink.pages.dev
 1-hyperlinkapp-86x.pages.dev
 1-hyperlinkapp.pages.dev
@@ -1122,6 +1126,7 @@
 1-proposal-jumperxyz.pages.dev
 1-proposal-loanmeme.pages.dev
 1-proposal-papertrade.pages.dev
+1-proposal-ponsfamily.pages.dev
 1-proposal-prjx.pages.dev
 1-proposal-stonkbrokers.pages.dev
 1-proposal-synthra.pages.dev
@@ -1145,6 +1150,7 @@
 1-tge-predict.pages.dev
 1-trump.com
 1-trustwallet.com
+1-usefelix.pages.dev
 1-venice.pages.dev
 1-vote-argusworld.pages.dev
 1-vote-cashmereexchange.pages.dev
@@ -1195,6 +1201,7 @@
 10-gov-ponsfamily.pages.dev
 10-gov-ramses.pages.dev
 10-governance-kinetiq.pages.dev
+10-governance-papertradexyz.pages.dev
 10-hyperlinkapp-86x.pages.dev
 10-hyperlinkxyz-e79.pages.dev
 10-ktf.xyz
@@ -1430,6 +1437,7 @@
 11-gov-ponsfamily.pages.dev
 11-gov-ramses.pages.dev
 11-governance-kinetiq.pages.dev
+11-governance-papertradexyz.pages.dev
 11-hyperlinkapp-86x.pages.dev
 11-hyperlinkxyz-e79.pages.dev
 11-netnet.pages.dev
@@ -2164,6 +2172,7 @@
 16-gov-ponsfamily.pages.dev
 16-gov-ramses.pages.dev
 16-governance-kinetiq.pages.dev
+16-governance-papertradexyz.pages.dev
 16-hyperlinkxyz-e79.pages.dev
 16-netnet.pages.dev
 16-paperdao.pages.dev
@@ -2407,7 +2416,6 @@
 177494coinbase.com
 1775111811.pages.dev
 1776coin.org
-177954-coinbase.com
 178-reallocate-flare.pages.dev
 17823920-coinbase.com
 17824910-coinbase.com
@@ -3661,6 +3669,7 @@
 2-allocations-abs.pages.dev
 2-allowlist-ascendlaunch.pages.dev
 2-app-argus.pages.dev
+2-app-pools.pages.dev
 2-arcuseco-event.pages.dev
 2-arcuseco.pages.dev
 2-arcustrade-ecosystem.pages.dev
@@ -4020,6 +4029,7 @@
 214908-coinbase.com
 215839-crypto.com
 215938-crypto.com
+216-allowlist-ascendlaunch.pages.dev
 216093-coinbase.com
 2164.team
 216485-crypto.com
@@ -4457,6 +4467,7 @@
 25-vote-papertrade.pages.dev
 25-vote-ponsfamily.pages.dev
 25.eth-claim.workers.dev
+250-allowlist-ascendlaunch.pages.dev
 250310-crypto.com
 250busd.com
 250busd.pages.dev
@@ -4501,6 +4512,7 @@
 26-gov-argus.pages.dev
 26-gov-concrete.pages.dev
 26-governance-kinetiq.pages.dev
+26-governance-papertrade.pages.dev
 26-netnet.pages.dev
 26-paperdao.pages.dev
 26-ponsfamily.pages.dev
@@ -4571,6 +4583,7 @@
 27-paperdao.pages.dev
 27-ponsfamily.pages.dev
 27-predeposit-papertrade.pages.dev
+27-proposal-3jane.pages.dev
 27-proposal-argus.pages.dev
 27-proposal-computersrh.pages.dev
 27-proposal-ethos.pages.dev
@@ -5309,6 +5322,7 @@
 32-allowlist-ascendlaunch.pages.dev
 32-arguseco.pages.dev
 32-argusworld.pages.dev
+32-axisroboticsai.pages.dev
 32-gov-argus.pages.dev
 32-gov-concrete.pages.dev
 32-governance-kinetiq.pages.dev
@@ -5552,6 +5566,7 @@
 34-tge-extended.pages.dev
 34-venice.pages.dev
 34-vote-argusworld.pages.dev
+34-vote-cashmereexchange.pages.dev
 34-vote-paperstrategy.pages.dev
 34-vote-papertrade.pages.dev
 34-vote-ponsfamily.pages.dev
@@ -6290,6 +6305,7 @@
 4-gov-ponsfamily.pages.dev
 4-gov-ramses.pages.dev
 4-governance-kinetiq.pages.dev
+4-governance-papertradexyz.pages.dev
 4-governance-ponsfamily.pages.dev
 4-hyperlink.pages.dev
 4-hyperlinkapp-86x.pages.dev
@@ -6313,6 +6329,7 @@
 4-proposal-jumper.pages.dev
 4-proposal-loanmeme.pages.dev
 4-proposal-papertrade.pages.dev
+4-proposal-papertradexyz.pages.dev
 4-proposal-prjx.pages.dev
 4-proposal-synthra.pages.dev
 4-proposal-zama.pages.dev
@@ -6348,6 +6365,7 @@
 40-derivexyz.pages.dev
 40-gov-argus.pages.dev
 40-governance-kinetiq.pages.dev
+40-governance-papertrade.pages.dev
 40-netnet.pages.dev
 40-nl-com.phantom-virtual-tap.com
 40-ponsfamily.pages.dev
@@ -6639,6 +6657,7 @@
 45-derivexyz.pages.dev
 45-gov-argus.pages.dev
 45-governance-kinetiq.pages.dev
+45-governance-papertrade.pages.dev
 45-netnet.pages.dev
 45-ponsfamily.pages.dev
 45-proposal-computersrh.pages.dev
@@ -6879,6 +6898,7 @@
 49-0xfluid.pages.dev
 49-allocation-yieldfields.pages.dev
 49-arguseco.pages.dev
+49-arguspad.pages.dev
 49-argusworld.pages.dev
 49-derivexyz.pages.dev
 49-gov-argus.pages.dev
@@ -7190,6 +7210,7 @@
 5-gov-ponsfamily.pages.dev
 5-gov-ramses.pages.dev
 5-governance-kinetiq.pages.dev
+5-governance-papertradexyz.pages.dev
 5-hyperlink.pages.dev
 5-hyperlinkapp-86x.pages.dev
 5-hyperlinkxyz-e79.pages.dev
@@ -7237,6 +7258,7 @@
 50-6-201-34.cprapid.com
 50-allocation-yieldfields.pages.dev
 50-arguseco.pages.dev
+50-arguspad.pages.dev
 50-argusworld.pages.dev
 50-brett.com
 50-derivexyz.pages.dev
@@ -7355,6 +7377,7 @@
 51-allocation-yieldfields.pages.dev
 51-allowlist-ascendlaunch.pages.dev
 51-arguseco.pages.dev
+51-arguspad.pages.dev
 51-argusworld.pages.dev
 51-derivexyz.pages.dev
 51-gov-argus.pages.dev
@@ -7408,6 +7431,7 @@
 52-0xfluid.pages.dev
 52-allocation-yieldfields.pages.dev
 52-arguseco.pages.dev
+52-arguspad.pages.dev
 52-argusworld.pages.dev
 52-brett.com
 52-derivexyz.pages.dev
@@ -7415,6 +7439,7 @@
 52-governance-kinetiq.pages.dev
 52-netnet.pages.dev
 52-ponsfamily.pages.dev
+52-proposal-computersrh.pages.dev
 52-proposal-ethos.pages.dev
 52-proposal-globaldollar.pages.dev
 52-proposal-papertrade.pages.dev
@@ -7475,6 +7500,7 @@
 53-0xfluid.pages.dev
 53-allocation-yieldfields.pages.dev
 53-arguseco.pages.dev
+53-arguspad.pages.dev
 53-argusworld.pages.dev
 53-derivexyz.pages.dev
 53-gov-argus.pages.dev
@@ -7525,6 +7551,7 @@
 54-175-78-24.plesk.page
 54-allocation-yieldfields.pages.dev
 54-arguseco.pages.dev
+54-arguspad.pages.dev
 54-argusworld.pages.dev
 54-derivexyz.pages.dev
 54-gov-argus.pages.dev
@@ -7579,6 +7606,7 @@
 55-0xfluid.pages.dev
 55-allocation-yieldfields.pages.dev
 55-arguseco.pages.dev
+55-arguspad.pages.dev
 55-argusworld.pages.dev
 55-derivexyz.pages.dev
 55-gov-argus.pages.dev
@@ -7760,6 +7788,7 @@
 58-arguspad.pages.dev
 58-derivexyz.pages.dev
 58-gov-argus.pages.dev
+58-governance-papertrade.pages.dev
 58-netnet.pages.dev
 58-proposal-globaldollar.pages.dev
 58-proposal-papertrade.pages.dev
@@ -8193,6 +8222,7 @@
 6-gov-ponsfamily.pages.dev
 6-gov-ramses.pages.dev
 6-governance-kinetiq.pages.dev
+6-governance-papertradexyz.pages.dev
 6-hyperlinkapp-86x.pages.dev
 6-hyperlinkxyz-e79.pages.dev
 6-longxyz.pages.dev
@@ -8242,6 +8272,7 @@
 60-gov-argus.pages.dev
 60-netnet.pages.dev
 60-proposal-globaldollar.pages.dev
+60-proposal-papertrade.pages.dev
 60-proposal-prjx.pages.dev
 60-reallocate-flare.pages.dev
 60-saturncredit.pages.dev
@@ -8499,6 +8530,7 @@
 64-0xfluid.pages.dev
 64-227-4-245.plesk.page
 64-arguseco.pages.dev
+64-arguspad.pages.dev
 64-derivexyz.pages.dev
 64-gov-argus.pages.dev
 64-netnet.pages.dev
@@ -9134,6 +9166,8 @@
 7-gov-ponsfamily.pages.dev
 7-gov-ramses.pages.dev
 7-governance-kinetiq.pages.dev
+7-governance-papertrade.pages.dev
+7-governance-papertradexyz.pages.dev
 7-hyperlinkapp-86x.pages.dev
 7-hyperlinkxyz-e79.pages.dev
 7-longxyz.pages.dev
@@ -9218,6 +9252,7 @@
 71-arguseco.pages.dev
 71-derivexyz.pages.dev
 71-netnet.pages.dev
+71-proposal-globaldollar.pages.dev
 71-proposal-prjx.pages.dev
 71-reallocate-flare.pages.dev
 71-saturncredit.pages.dev
@@ -9265,6 +9300,7 @@
 72-arguseco.pages.dev
 72-derivexyz.pages.dev
 72-netnet.pages.dev
+72-proposal-globaldollar.pages.dev
 72-proposal-prjx.pages.dev
 72-reallocate-flare.pages.dev
 72-saturncredit.pages.dev
@@ -9559,6 +9595,7 @@
 78-proposal-prjx.pages.dev
 78-reallocate-flare.pages.dev
 78-saturncredit.pages.dev
+78-stonkbroker-clutchmarkets.pages.dev
 780426-crypto.com
 780491-crypto.com
 781286-cb.com
@@ -9623,6 +9660,7 @@
 79-proposal-prjx.pages.dev
 79-reallocate-flare.pages.dev
 79-saturncredit.pages.dev
+79-stonkbroker-clutchmarkets.pages.dev
 79.137.202.34.sslip.io
 79.voting-etherfi-pro.workers.dev
 790310-crypto.com
@@ -9844,6 +9882,7 @@
 8-gov-ponsfamily.pages.dev
 8-gov-ramses.pages.dev
 8-governance-kinetiq.pages.dev
+8-governance-papertradexyz.pages.dev
 8-hyperlinkapp-86x.pages.dev
 8-hyperlinkxyz-e79.pages.dev
 8-netnet.pages.dev
@@ -9862,6 +9901,7 @@
 8-proposal-jumper.pages.dev
 8-proposal-loanmeme.pages.dev
 8-proposal-papertrade.pages.dev
+8-proposal-papertradexyz.pages.dev
 8-proposal-prjx.pages.dev
 8-proposal-synthra.pages.dev
 8-proposal-zama.pages.dev
@@ -9888,6 +9928,7 @@
 80-proposal-prjx.pages.dev
 80-reallocate-flare.pages.dev
 80-saturncredit.pages.dev
+80-stonkbroker-clutchmarkets.pages.dev
 80.77.25.56.fqdn.vps2day.com
 80.78.27.47
 800-ltd.com
@@ -10726,6 +10767,7 @@
 9-argus-pad.pages.dev
 9-argus.pages.dev
 9-arguseco.pages.dev
+9-arguspad.pages.dev
 9-argusworld.pages.dev
 9-argusworlds-933.pages.dev
 9-axisroboticsai.pages.dev
@@ -10745,6 +10787,7 @@
 9-gov-ponsfamily.pages.dev
 9-gov-ramses.pages.dev
 9-governance-kinetiq.pages.dev
+9-governance-papertradexyz.pages.dev
 9-hyperlinkapp-86x.pages.dev
 9-hyperlinkxyz-e79.pages.dev
 9-netnet.pages.dev
@@ -10879,7 +10922,6 @@
 918358coinbase.com
 918402-crypto.com
 918516-crypto.com
-918526coinbase.com
 91923-coinbase.com
 919496coinbase.com
 91e8fe58.hshhnsnndn.pages.dev
@@ -21960,6 +22002,7 @@ airdrop.edgeiayer.org
 airdrop.edgeniayer.com
 airdrop.eigenliayer.network
 airdrop.eilys.network
+airdrop.eligibility-ripple.com
 airdrop.eligible-worldlibertyfinancial.com
 airdrop.ellipisislabfi.events
 airdrop.ellipisislabfi.net
@@ -22611,6 +22654,7 @@ airdrop.skin
 airdrop.skynity.xyz
 airdrop.sleepleessai.net
 airdrop.slgn.global
+airdrop.snapshot-ripple.com
 airdrop.snsid.icu
 airdrop.sohic.games
 airdrop.solayer-claim.xyz
@@ -22790,6 +22834,7 @@ airdrop.web3inu.io
 airdrop.webopen24h.top
 airdrop.welikethefox.blog
 airdrop.wenbase.fun
+airdrop.whitelist-ripple.com
 airdrop.wikicatcoln.com
 airdrop.wine
 airdrop.wld.dev
@@ -24900,7 +24945,6 @@ akshayascientifics.com
 aksinternation.com
 aksoydoviz.com
 akswap.io
-akt-network.airdropalerts.us
 akt-networks.airdropalerts.us
 akt.airdropalerts.club
 aktifol.online
@@ -27039,6 +27083,8 @@ allocation-degen.net
 allocation-degen.org
 allocation-degentokenbase.com
 allocation-degods.com
+allocation-deltaliquidity.app
+allocation-deltaliquidity.pages.dev
 allocation-derive.com
 allocation-derive.xyz
 allocation-desk-live.com
@@ -27113,6 +27159,7 @@ allocation-ena.com
 allocation-enosys.app
 allocation-epoch.com
 allocation-eternalai.com
+allocation-ethena.fi
 allocation-ethenafinance.app
 allocation-ethenaiabs.app
 allocation-ethenaiabs.com
@@ -29582,6 +29629,7 @@ allowkyhxo.bond
 allowlist-arrow.xyz
 allowlist-ascend.info
 allowlist-ascendlaunch.info
+allowlist-ascendlaunch.live
 allowlist-ascendlaunch.pages.dev
 allowlist-ascendlaunch.xyz
 allowlist-blast.com
@@ -32776,6 +32824,7 @@ anniversary-filecoin.io
 anniversary-lido.org
 anniversary-pudgypenguins.com
 anniversary-uni.com
+anniversary-xaman.app
 anniversary.onchain-base.org
 anniversarytoken.com
 annnkrstaking.com
@@ -40411,7 +40460,6 @@ app.klarak.network
 app.klausmeme.fun
 app.kodiakifnance.top
 app.kolrak.network
-app.koreacoinbase.com
 app.korlak.network
 app.kraken-protocol.com
 app.kraken-staking.com
@@ -42536,7 +42584,6 @@ appintegratedverse.pro
 appintegrateverse-click.xyz
 appintegrationverse.pro
 appintentx.io
-appio-mattamask.wixstudio.com
 appionic.money
 appionic.xyz
 appis.megapot.co.in
@@ -43505,7 +43552,6 @@ apps-metamaskcdn.framer.media
 apps-metamaskcdn.wixstudio.com
 apps-metamaskext.wixstudio.com
 apps-metamaskhelp-io.wixstudio.com
-apps-metamaskio.wixstudio.com
 apps-metamaskiocdn.wixstudio.com
 apps-metamaskk-io.wixstudio.com
 apps-metamaskk.wixstudio.com
@@ -43676,7 +43722,6 @@ apps-slothana-com.pages.dev
 apps-sns.com
 apps-soil.com
 apps-solana.web.app
-apps-solv-finance.com
 apps-solv.finance
 apps-solvfinance.com
 apps-solvprotocol.com
@@ -62079,7 +62124,6 @@ bifbytes.live
 biffrost.app
 biffrostweb.app
 bifget.pro
-bifi-app.airsdropalerts.click
 bifi-apps.airsdropalerts.click
 bifi.airdropalerts.vip
 bifi.airsdropalerts.click
@@ -68538,7 +68582,6 @@ blockchaintoken.one
 blockchaintradee.com
 blockchaintradehur.cc
 blockchaintradew.com
-blockchainundo.ai
 blockchainvalidate.pages.dev
 blockchainvalidation.live
 blockchainvalidations.live
@@ -75907,7 +75950,6 @@ brothersjhp.bond
 brothisinotworkiingg.pages.dev
 brotonex.com
 brotty.org
-brouter.us
 brovapharma.ua
 browmprime.com
 brown-fi.org
@@ -87140,6 +87182,7 @@ checkers-hyperfoundation.xyz
 checkers-nodepayai.com
 checkers-sapien.website
 checkers-secondfi.xyz
+checkers-tollylabs.xyz
 checkers-treadfi.xyz
 checkers-trumpmemes.com
 checkers-walrus.site
@@ -89473,7 +89516,6 @@ claim-ascendex.com
 claim-ascendex.net
 claim-asciicats.app
 claim-asentum.live
-claim-assets-token-xyo.pages.dev
 claim-astar.net
 claim-asterdex.xyz
 claim-asteroid.pages.dev
@@ -101420,6 +101462,9 @@ claims-doodles.app
 claims-dop.com
 claims-dop.org
 claims-dop.pages.dev
+claims-dopplerfinance.bond
+claims-dopplerfinance.cfd
+claims-dopplerfinance.cyou
 claims-doublezero.app
 claims-drop.web.app
 claims-drops.xyz
@@ -103384,6 +103429,7 @@ claimxlm.com
 claimxociety.io
 claimxrp.org
 claimxrp.website
+claimxrpl.com
 claimxspectar.com
 claimxtoken.xyz
 claimxwallet.com
@@ -106406,6 +106452,7 @@ coinbase-entry.site
 coinbase-enus-help.wixstudio.com
 coinbase-enverify.com
 coinbase-eth-mining.com
+coinbase-eth.com
 coinbase-eth.com.cn
 coinbase-ether.com
 coinbase-eu.net
@@ -112578,6 +112625,7 @@ community-worldliberty.com
 community-worldlibertyfi.com
 community-worldwide.online
 community-wormhole.com
+community-xrpl.com
 community-xrpl.live
 community-xrpl.xyz
 community-zama.xyz
@@ -115854,6 +115902,7 @@ contacthelp-x.com
 contacthelps-coinbase.com
 contacthelpsupport-microsoft.com
 contactmetamask.com
+contactmetamask.top
 contactmetamasklive.report
 contacto.tecnired.com.pe
 contactopensea.site
@@ -125100,6 +125149,7 @@ dao-tnzr.web.app
 dao-tokens.web.app
 dao-tokenspaircollector0i.pages.dev
 dao-treasuredao.com
+dao-trustpads.com
 dao-uni.org
 dao-unipeg.art
 dao-uniswap.com
@@ -130601,6 +130651,8 @@ dashboard-orca.xyz
 dashboard-otcdesk.sbs
 dashboard-otsea.xyz
 dashboard-paimon.xyz
+dashboard-papertrade.icu
+dashboard-papertrade.pages.dev
 dashboard-paragraph.xyz
 dashboard-pendie.finance
 dashboard-pepe.vip
@@ -136981,7 +137033,6 @@ deploy-dapp.pages.dev
 deploy-flarefn.live
 deploy-ledgrcom-starts.pages.dev
 deploy-preview-1454--aptos-explorer.netlify.app
-deploy-preview-17966.ethereum.it
 deploy-preview-18254--ethereumorg.netlify.app
 deploy-preview-18310.ethereum.it
 deploy-preview-18953.ethereum.it
@@ -142754,7 +142805,6 @@ docsmetamask-llogisssss.godaddysites.com
 docsmetamaskio.gitbook.io
 docsportmanteasecre.site
 docsportmanteasecure.pages.dev
-docsskymavis.wixstudio.com
 docsuite-trezorr.gitbook.io
 docszerolend.xyz
 docterms-x.com
@@ -152731,6 +152781,7 @@ ellipalwallet.org
 ellipalwalletdesktop.io
 ellipalwallets.io
 ellipalwalletsdesktop.app
+ellipse.fun
 ellipsisfi.ink
 ellipsisfi.trade
 ellipsisfinance.click
@@ -154620,7 +154671,6 @@ eng-trust.org
 eng-trust.wixstudio.com
 eng-trustcdn-apps.wixstudio.com
 eng-trustextension.wixstudio.com
-eng-trustt-ext.wixstudio.com
 eng-trustwallet.com
 eng-trzor-io-suite.typedream.app
 eng-trzor-welcome-se.typedream.app
@@ -156574,7 +156624,6 @@ entrrust-extension.wixstudio.com
 entrust-extension.wixstudio.com
 entrust-web.wixstudio.com
 entrustextension.wixstudio.com
-entrustwallet.io
 entry-bitget.com.cn
 entry-blast.io
 entry-code-cdn.codes
@@ -160163,7 +160212,6 @@ etherfi-claims.pages.dev
 etherfi-claims.vercel.app
 etherfi-claims.xyz
 etherfi-club.app
-etherfi-club.com
 etherfi-club.org
 etherfi-cocos.com
 etherfi-d3z.pages.dev
@@ -163929,7 +163977,6 @@ events-wink.com
 events-worldcoin.com
 events-worldcoin.org
 events-worldcuponpump.com
-events-worldliberty.com
 events-worthless.fun
 events-x1xhlol.fun
 events-xaman.app
@@ -165557,7 +165604,6 @@ exodus-us-wallet.pages.dev
 exodus-us-wlttae.gitbook.io
 exodus-us.com
 exodus-us.org
-exodus-us.wixstudio.com
 exodus-v.co.com
 exodus-verifications.pages.dev
 exodus-w.co.com
@@ -166355,8 +166401,6 @@ ext-metamsk-apps.wixstudio.com
 ext-metamsk.wixstudio.com
 ext-metamskhelp.wixstudio.com
 ext-metask.gitbook.io
-ext-metmask.wixstudio.com
-ext-mtamask.wixstudio.com
 ext-open-koinbase.wixstudio.com
 ext-platform.wixstudio.com
 ext-rubby-apps.wixstudio.com
@@ -166617,7 +166661,6 @@ extnrabbyy-pages.wixstudio.com
 extnsemtmsk.webflow.io
 extnsion-coinbese.wixstudio.com
 extnsion-conbase.wixstudio.com
-extnsion-trst.wixstudio.com
 extnsion-wll-base.pages.dev
 extnsionn-io.wixstudio.com
 extnsions-appcdn.wixstudio.com
@@ -167003,6 +167046,7 @@ fablesfi-portal.xyz
 fablesfi-portals.xyz
 fablesfi-reward.xyz
 fablesfi-rewards.xyz
+fablesfi-vault.xyz
 fablesfi-wallet.xyz
 fablesfi-wallets.xyz
 fablesfi.cfd
@@ -168905,6 +168949,7 @@ fdqufp.cc
 fdre.info
 fdres.pages.dev
 fdsdfsdfeee.pages.dev
+fdsdsf.lol
 fdsfger32445.icu
 fdsfsd.sbs
 fdsgertyg4e4ty.pages.dev
@@ -169801,6 +169846,7 @@ fi-pay.eu.cc
 fi-pendleswap.xyz
 fi-proposal.app
 fi-proposal.live
+fi-proposals.live
 fi-puffer.com
 fi-puffy-chapter3.top
 fi-puffy-quest.top
@@ -170313,6 +170359,7 @@ finance-claim.app
 finance-claim.org
 finance-coinbase.com
 finance-comet.beer
+finance-community.info
 finance-community.net
 finance-curve.com
 finance-curve.net
@@ -171837,6 +171884,7 @@ firelight-ecosystem.lol
 firelight-ecosystem.space
 firelight-ecosystem.top
 firelight-ecosystem.xyz
+firelight-ecosystems.asia
 firelight-ecosystems.icu
 firelight-ecosystems.top
 firelight-ecosystems.xyz
@@ -174895,7 +174943,6 @@ fllares.network
 fllashbeet.xyz
 flle-coin.airsdropalerts.click
 flle-coins.airsdropalerts.click
-fllecoin.airsdropalerts.click
 fllecoins.airdropalerts.us
 fllere.network
 flles-coin.airsdropalerts.click
@@ -179479,7 +179526,6 @@ fun-liver.fun
 fun-liver.xyz
 fun-livestream.fun
 fun-livve.xyz
-fun-nyla.pro
 fun-online.xyz
 fun-pump.com
 fun-pump.fun
@@ -185771,7 +185817,6 @@ gettrustcard.pro
 gettrustcard.xyz
 gettrustpayment.live
 gettrx.org
-gettrx.us
 gettrxi.org
 gettsrumpmemes.com
 getturbotokens.xyz
@@ -188689,6 +188734,7 @@ go-page-5269-b2396a2en-vercel-project-key.vercel.app
 go-pancakefinance.com
 go-pancakeswepfinance.com
 go-pandora.app
+go-papertrade.xyz
 go-plus.pages.dev
 go-porkcoin.com
 go-portalgaming.com
@@ -189348,7 +189394,6 @@ goldfish-ticket.web.app
 goldfish-writeup.netlify.app
 goldfishclaim.com
 goldfishclaims.com
-goldfishgold.airsdropalerts.click
 goldfishgold.cam
 goldfishgold.firebaseapp.com
 goldfishgold.info
@@ -190383,7 +190428,11 @@ governance-ethenalabs.dev
 governance-ether.fi
 governance-ether.finance
 governance-ethereal.com
+governance-etherfi.asia
+governance-etherfi.bond
+governance-etherfi.cfd
 governance-etherfi.com
+governance-etherfi.cyou
 governance-etherfi.fun
 governance-etherfi.info
 governance-etherfi.net
@@ -190548,6 +190597,8 @@ governance-netnet.fun
 governance-netnet.icu
 governance-netnet.surf
 governance-netnet.xyz
+governance-netnetcap.icu
+governance-netnetcap.pages.dev
 governance-netnetcapital.xyz
 governance-network.com
 governance-neverland.com
@@ -190582,6 +190633,7 @@ governance-pendle.net
 governance-pendle.xyz
 governance-pendlefi.org
 governance-pendlefi.xyz
+governance-pendlefinance.com
 governance-pendlefinance.xyz
 governance-perpl.xyz
 governance-pharos.xyz
@@ -190615,6 +190667,7 @@ governance-renzo.org
 governance-renzoprotocol.app
 governance-renzoprotocol.com
 governance-riverinc.app
+governance-rocketdash.com
 governance-rocketdash.net
 governance-rysk.finance
 governance-sa1t.fun
@@ -191152,7 +191205,6 @@ grandpasha7166.com
 grandplay.co
 grandrisingunlimited.org
 grandroyal-wolinak.com
-grandroyal-wolinak.website
 grandroyalwolinak.casino
 grandroyalwolinakcasino.ca
 grandroyalwolinakcasino.us.com
@@ -192798,7 +192850,6 @@ guildoauth.net
 guildofguardians.pages.dev
 guildofguardiansmint.com
 guildofguaridnes.com
-guildos.org
 guildprotect.net
 guildqb.premint.site
 guildrole-sync.com
@@ -199425,7 +199476,6 @@ https-bybit.com
 https-connect-binance.us
 https-debank.com
 https-deelance.com
-https-echo-walletconnect-com-66dc9cac31a63ab517d988b234c60.pages.dev
 https-loading.site
 https-login.evergreenfin.ltd
 https-metamask.4nmn.com
@@ -199771,6 +199821,8 @@ hub-unstoppabledomains.com
 hub-uphold.created.app
 hub-usdc.com
 hub-usdcoin.com
+hub-usefelix.pages.dev
+hub-usefelix.xyz
 hub-usepaid.app
 hub-usepaid.xyz
 hub-usuai.app
@@ -199906,6 +199958,7 @@ hubs-dappradar.top
 hubs-doppler.finance
 hubs-doppler.fun
 hubs-doppler.lat
+hubs-hype.xyz
 hubs-hyperfoundation.xyz
 hubs-injective.com
 hubs-koinblaze-ext.wixstudio.com
@@ -200673,6 +200726,7 @@ hype-season.xyz
 hype-ventuals.com
 hype-ventuals.info
 hype-ventuals.live
+hype-vote.xyz
 hype.hk.cn
 hype.pro-multicoin.net
 hype.rliquid.org
@@ -201252,6 +201306,7 @@ hyperliquid-airdropx.pages.dev
 hyperliquid-allocation.com
 hyperliquid-allocation.org
 hyperliquid-allocations.com
+hyperliquid-analyzer.vercel.app
 hyperliquid-anime.pages.dev
 hyperliquid-app-page.github.io
 hyperliquid-app.gr.com
@@ -202425,7 +202480,12 @@ ico-nulink.online
 ico-omnera.xyz
 ico-pablo-defi.com
 ico-pablodefi.com
+ico-paper.com
+ico-paperfnd.com
+ico-paperfndn.com
 ico-papertrade.xyz
+ico-papertradefnd.xyz
+ico-papertrades.xyz
 ico-sale.com
 ico-shib.com
 ico-subquery.network
@@ -202440,6 +202500,7 @@ ico.omnera.finance
 ico.omnera.money
 ico.omnerausd.io
 ico.pablo-defi.co
+ico.papertradefoundation.com
 ico2.xyz
 icoairdropsales.com
 icoapple.info
@@ -205134,7 +205195,6 @@ info-uniswap.com
 info-update-au-login.sbs
 info-us-ledgrcom-start.pages.dev
 info-vela.com
-info-veniceai.xyz
 info-view.to
 info-virtuals.com
 info-vultisig.com
@@ -205172,6 +205232,7 @@ infomail-coinbase.com
 infomemedefi.eu
 infometamask.com
 infometamask.digital
+infometamask.io
 infometamaskapp.com
 infomigdapp.com
 infomint.xyz
@@ -205461,6 +205522,7 @@ injective-beanz.xyz
 injective-claim.com
 injective-claim.top
 injective-claim.xyz
+injective-community-vote-nu4007.vercel.app
 injective-distribution.com
 injective-distribution.xyz
 injective-drops.xyz
@@ -205468,6 +205530,7 @@ injective-event.live
 injective-event.net
 injective-event.site
 injective-event.xyz
+injective-governance.xyz
 injective-home.org
 injective-hub.com
 injective-hub.org
@@ -206600,7 +206663,6 @@ interest-stargate.finance
 interest-strike.org
 interest-tydro.com
 interest-usdai.com
-interest-usdai.org
 interest-usdai.xyz
 interest-yieldbasis.com
 interest.caixinguojist.com
@@ -206921,7 +206983,6 @@ intro-koinbaseapp.wixstudio.com
 intro-layer.com
 intro-learned-en.wixstudio.com
 intro-liv-dsktops.wixstudio.com
-intro-metameskio.wixstudio.com
 intro-metmask-io.wixstudio.com
 intro-metmsk.wixstudio.com
 intro-metmskextn.wixstudio.com
@@ -208181,6 +208242,7 @@ io-trezor-suite-us.pages.dev
 io-trezor-us-x-eng.pages.dev
 io-trezor-wallet.pages.dev
 io-trezor.at
+io-trezor.com
 io-trezor.com.co
 io-trezorcom.pages.dev
 io-trezorlogin-web.pages.dev
@@ -216416,7 +216478,6 @@ keanuxyz.pages.dev
 kearnybank.co.com
 keawaesa.cfd
 keaz-claim.xyz
-kebabavax.xyz
 kebapqbf.bond
 kebeb.site
 kebob.xyz
@@ -217708,7 +217769,6 @@ kinetiq-staking.com
 kinetiq-stakings.xyz
 kinetiq-transition.com
 kinetiq-v2.com
-kinetiq-v2.xyz
 kinetiq-vote.app
 kinetiq-vote.xyz
 kinetiq-votes.app
@@ -224829,8 +224889,6 @@ ldgqnt8.lat
 ldgr-cm-started.wixstudio.com
 ldgr-comstarts.wixstudio.com
 ldgr.co.com
-ldgr78sdggdf.samra2.workers.dev
-ldgr78vberd.samra2.workers.dev
 ldgre-homepage.kb.help
 ldgrijsjbhj.malibu02.workers.dev
 ldgrlive.co.com
@@ -225853,6 +225911,7 @@ ledger-sale-2024.pages.dev
 ledger-secure-access.com
 ledger-secure-clearsigning.com
 ledger-secure-support.com
+ledger-secure-update.fr
 ledger-secure-usernow.com
 ledger-secure.com
 ledger-secure.me
@@ -225972,7 +226031,6 @@ ledger.app-and-web3.shop
 ledger.app-starts-livee-download.info
 ledger.br.com
 ledger.co-ch.sbs
-ledger.co.bz
 ledger.co.id
 ledger.com-live.cc
 ledger.com.ag
@@ -226875,7 +226933,6 @@ legder-dekstop-live.us.com
 legder-lifes.com
 legder-live-desktop.org
 legder-live-download.us.com
-legder-live.io
 legder-live.net
 legder-lives-download.com
 legder-lives-download.icu
@@ -226936,7 +226993,6 @@ legerlivee.wixstudio.com
 legers-live.com
 legger-live.com
 legger-live.us.com
-legger.co.za
 leggerr-iive-desktop.to
 leggers-live.com
 leggers-live.us.com
@@ -243838,7 +243894,6 @@ mayairdrop-app.pw
 mayakawausa.com
 mayan-finance-3xs.pages.dev
 mayan-finance.com
-mayan.exchange
 mayanapp.com
 mayanfi.cc
 mayanfiance.com
@@ -247718,7 +247773,6 @@ meta-mask.xyz
 meta-maskairdrop.com
 meta-maskchromeexten.wixstudio.com
 meta-maskextension.wixstudio.com
-meta-maskio.wixstudio.com
 meta-maskluginxgic.godaddysites.com
 meta-masks.vercel.app
 meta-maskupx.com
@@ -248815,6 +248869,7 @@ metamask-drop.com
 metamask-drop.site
 metamask-eip-1559.rf.gd
 metamask-eligibility.app
+metamask-email.com
 metamask-en-home.wixstudio.com
 metamask-en-intro.wixstudio.com
 metamask-enxtension.wixstudio.com
@@ -249871,6 +249926,7 @@ metamask.trans-activity.com
 metamask.tw
 metamask.uno
 metamask.us
+metamask.us.com
 metamask.vc
 metamask.ventures
 metamask.verficaton-app.com
@@ -250180,6 +250236,9 @@ metamaskeloggenene.webflow.io
 metamaskelogina.gitbook.io
 metamaskeloginn.webflow.io
 metamaskemail.com
+metamaskemailverification.com
+metamaskemailverification.online
+metamaskemailverify.com
 metamaskenabled.com
 metamaskenig.azurewebsites.net
 metamaskent.com
@@ -250782,6 +250841,7 @@ metamaskwallet-restore.com
 metamaskwallet-web3.com
 metamaskwallet.cc
 metamaskwallet.cn
+metamaskwallet.co
 metamaskwallet.com
 metamaskwallet.com.cn
 metamaskwallet.digital
@@ -251494,7 +251554,6 @@ metasmaak-extension.wixstudio.com
 metasmaak-io.wixstudio.com
 metasmaask.azurewebsites.net
 metasmak-ext.wixstudio.com
-metasmak-io.wixstudio.com
 metasmakio.site
 metasmask-io.ink
 metasmask.cc
@@ -252371,7 +252430,6 @@ metlsl2.com
 metltamaskweallet.godaddysites.com
 metm--lgin.webflow.io
 metm-llegin.webflow.io
-metmaask-io.wixstudio.com
 metmaaskkextensiond.gitbook.io
 metmaiioometension.gitbook.io
 metmak.backpack-wallet.com
@@ -265541,7 +265599,6 @@ morossnet.online
 morossnet.org
 morossnet.pw
 morossnet.xyz
-morp-ho.org
 morph-24r.pages.dev
 morph-events.com
 morph-o.org
@@ -266168,7 +266225,6 @@ mr-krab-token.xyz
 mr-kt.cfd
 mr-ledger-live.com
 mr-ledger.at
-mr-ledger.com
 mr-ledger.org
 mr-metamask.org
 mr-miggles-base.xyz
@@ -277001,6 +277057,7 @@ newpepe.site
 newpeperc.com
 newpeperc.vip
 newpeperewards.com
+newphase.dev
 newplanetordertrades.com
 newplatformdex.pages.dev
 newplatformformigration.com
@@ -286487,6 +286544,7 @@ omni.ciique.tech
 omni.connect-app.xyz
 omni.varaitonal.com
 omni.varational.mom
+omni.varialional.co
 omni.varialtional.us
 omni.variartional.io
 omni.variational-io.cyou
@@ -287231,7 +287289,6 @@ ondo-finance.app
 ondo-finance.cloud
 ondo-finance.in
 ondo-finance.lat
-ondo-finance.org
 ondo-finance.pages.dev
 ondo-finance.sbs
 ondo-finance.site
@@ -294163,6 +294220,7 @@ otc-crates.com
 otc-crates.xyz
 otc-defi.vip
 otc-desk.cash
+otc-desk.fun
 otc-desks.cash
 otc-desks.xyz
 otc-early.xyz
@@ -298688,6 +298746,9 @@ papeproject.org
 papeproject.xyz
 paper-6da.pages.dev
 paper-ezv.pages.dev
+paper-fnd.com
+paper-foundation.com
+paper-foundation.xyz
 paper-hand.net
 paper-hand.web.app
 paper-handed.com
@@ -298717,6 +298778,10 @@ papered.cc
 papered.io
 papered.xyz
 paperfacesclub.com
+paperfnd.xyz
+paperfndn.com
+paperfoundation.app
+paperfoundation.xyz
 paperguard.app
 paperguard.io
 paperh.xyz
@@ -298926,6 +298991,7 @@ papertrade.sbs
 papertrade.top
 papertradefdn.xyz
 papertradefndn.xyz
+papertradehub.xyz-governance.info
 papertradeinvitations.com
 papertraderewards.xyz
 papertradexyz.best
@@ -298934,6 +299000,7 @@ papertradexyz.com
 papertradexyz.lat
 papertradexyz.online
 papertradez.cfd
+papertradie.xyz
 papertrading.sbs
 papertradr.xyz
 papertrae.xyz
@@ -304126,6 +304193,7 @@ perp-kqkh.vercel.app
 perp-mlbk.vercel.app
 perp-ms4c.vercel.app
 perp-ondo.finance
+perp-papertrade.xyz
 perp-pg3p.vercel.app
 perp-sushi.cfd
 perp-sushi.xyz
@@ -304155,6 +304223,7 @@ perponchaintrade.pages.dev
 perponschainrewards.pages.dev
 perponschaintrade.pages.dev
 perprotocoi.quest
+perps-papertrade.xyz
 perps-polymarket.com
 perps-polymarkets.com
 perps.fun-apply.com
@@ -307503,7 +307572,6 @@ plasma-to.icu
 plasma-todo.pages.dev
 plasma-token.com
 plasma-util-2y9.pages.dev
-plasma-util.pages.dev
 plasma-voice.pages.dev
 plasma-vote.app
 plasma-vote.com
@@ -313166,6 +313234,7 @@ portal-moonshot-02o.netlify.app
 portal-moonshot-033.netlify.app
 portal-moonshot-04d.netlify.app
 portal-moonshot-08r.netlify.app
+portal-moonshot-09w.netlify.app
 portal-moonshot-0bn.netlify.app
 portal-moonshot-0bz.netlify.app
 portal-moonshot-0dw.netlify.app
@@ -313175,24 +313244,32 @@ portal-moonshot-0ts.netlify.app
 portal-moonshot-0uw.netlify.app
 portal-moonshot-0w6.netlify.app
 portal-moonshot-0yf.netlify.app
+portal-moonshot-10v.netlify.app
 portal-moonshot-11c.netlify.app
 portal-moonshot-17s.netlify.app
 portal-moonshot-18g.netlify.app
 portal-moonshot-1g3.netlify.app
 portal-moonshot-1ha.netlify.app
+portal-moonshot-1lz.netlify.app
 portal-moonshot-1mh.netlify.app
 portal-moonshot-1nt.netlify.app
 portal-moonshot-1q5.netlify.app
 portal-moonshot-1vd.netlify.app
 portal-moonshot-1zg.netlify.app
 portal-moonshot-22a.netlify.app
+portal-moonshot-279.netlify.app
 portal-moonshot-2cf.netlify.app
 portal-moonshot-2ch.netlify.app
 portal-moonshot-2cr.netlify.app
+portal-moonshot-2gt.netlify.app
 portal-moonshot-2gy.netlify.app
+portal-moonshot-2jn.netlify.app
+portal-moonshot-2ke.netlify.app
+portal-moonshot-2nq.netlify.app
 portal-moonshot-2pg.netlify.app
 portal-moonshot-2qm.netlify.app
 portal-moonshot-2qw.netlify.app
+portal-moonshot-2tz.netlify.app
 portal-moonshot-2vi.netlify.app
 portal-moonshot-2x5.netlify.app
 portal-moonshot-2zp.netlify.app
@@ -313203,52 +313280,75 @@ portal-moonshot-3b4.netlify.app
 portal-moonshot-3ek.netlify.app
 portal-moonshot-3fl.netlify.app
 portal-moonshot-3lh.netlify.app
+portal-moonshot-3md.netlify.app
 portal-moonshot-3sa.netlify.app
+portal-moonshot-3si.netlify.app
 portal-moonshot-3vb.netlify.app
 portal-moonshot-3xa.netlify.app
 portal-moonshot-3z2.netlify.app
 portal-moonshot-410.netlify.app
 portal-moonshot-4fn.netlify.app
 portal-moonshot-4jy.netlify.app
+portal-moonshot-4ly.netlify.app
 portal-moonshot-4mv.netlify.app
 portal-moonshot-4nv.netlify.app
+portal-moonshot-4oy.netlify.app
 portal-moonshot-4p9.netlify.app
 portal-moonshot-4pa.netlify.app
 portal-moonshot-4rl.netlify.app
 portal-moonshot-4x3.netlify.app
+portal-moonshot-58b.netlify.app
 portal-moonshot-59a.netlify.app
+portal-moonshot-5am.netlify.app
 portal-moonshot-5ay.netlify.app
+portal-moonshot-5ek.netlify.app
 portal-moonshot-5fa.netlify.app
 portal-moonshot-5gu.netlify.app
 portal-moonshot-5i9.netlify.app
+portal-moonshot-5j6.netlify.app
+portal-moonshot-5k9.netlify.app
+portal-moonshot-5kl.netlify.app
 portal-moonshot-5lk.netlify.app
+portal-moonshot-5mk.netlify.app
 portal-moonshot-5qa.netlify.app
 portal-moonshot-5qt.netlify.app
 portal-moonshot-5ux.netlify.app
 portal-moonshot-5wb.netlify.app
 portal-moonshot-62x.netlify.app
 portal-moonshot-668.netlify.app
+portal-moonshot-66m.netlify.app
 portal-moonshot-68o.netlify.app
 portal-moonshot-6c3.netlify.app
 portal-moonshot-6d4.netlify.app
+portal-moonshot-6eu.netlify.app
+portal-moonshot-6kv.netlify.app
+portal-moonshot-6mx.netlify.app
 portal-moonshot-6p0.netlify.app
 portal-moonshot-6sd.netlify.app
+portal-moonshot-6vz.netlify.app
 portal-moonshot-70p.netlify.app
 portal-moonshot-71t.netlify.app
 portal-moonshot-72a.netlify.app
 portal-moonshot-74u.netlify.app
+portal-moonshot-76i.netlify.app
 portal-moonshot-76y.netlify.app
+portal-moonshot-77g.netlify.app
 portal-moonshot-7ag.netlify.app
 portal-moonshot-7hc.netlify.app
+portal-moonshot-7lh.netlify.app
 portal-moonshot-7lr.netlify.app
 portal-moonshot-7t6.netlify.app
+portal-moonshot-7uf.netlify.app
+portal-moonshot-7vw.netlify.app
 portal-moonshot-7z5.netlify.app
 portal-moonshot-7zh.netlify.app
 portal-moonshot-83r.netlify.app
+portal-moonshot-85d.netlify.app
 portal-moonshot-860.netlify.app
 portal-moonshot-86h.netlify.app
 portal-moonshot-88a.netlify.app
 portal-moonshot-8a4.netlify.app
+portal-moonshot-8b8.netlify.app
 portal-moonshot-8cm.netlify.app
 portal-moonshot-8gi.netlify.app
 portal-moonshot-8j2.netlify.app
@@ -313264,26 +313364,37 @@ portal-moonshot-947.netlify.app
 portal-moonshot-96o.netlify.app
 portal-moonshot-985.netlify.app
 portal-moonshot-9ca.netlify.app
+portal-moonshot-9ff.netlify.app
 portal-moonshot-9fi.netlify.app
+portal-moonshot-9l0.netlify.app
 portal-moonshot-9ly.netlify.app
+portal-moonshot-9rw.netlify.app
 portal-moonshot-9su.netlify.app
+portal-moonshot-9v1.netlify.app
 portal-moonshot-9ym.netlify.app
 portal-moonshot-9zg.netlify.app
+portal-moonshot-afw.netlify.app
 portal-moonshot-ahk.netlify.app
 portal-moonshot-amv.netlify.app
 portal-moonshot-anl.netlify.app
 portal-moonshot-ao0.netlify.app
 portal-moonshot-aof.netlify.app
 portal-moonshot-aut.netlify.app
+portal-moonshot-auu.netlify.app
 portal-moonshot-avq.netlify.app
+portal-moonshot-az8.netlify.app
+portal-moonshot-b0e.netlify.app
 portal-moonshot-b0g.netlify.app
 portal-moonshot-b0k.netlify.app
 portal-moonshot-b2f.netlify.app
 portal-moonshot-bb8.netlify.app
 portal-moonshot-bc2.netlify.app
+portal-moonshot-bck.netlify.app
+portal-moonshot-bef.netlify.app
 portal-moonshot-bfw.netlify.app
 portal-moonshot-bij.netlify.app
 portal-moonshot-bom.netlify.app
+portal-moonshot-bop.netlify.app
 portal-moonshot-bqq.netlify.app
 portal-moonshot-c23.netlify.app
 portal-moonshot-c40.netlify.app
@@ -313301,82 +313412,121 @@ portal-moonshot-cqt.netlify.app
 portal-moonshot-csi.netlify.app
 portal-moonshot-czn.netlify.app
 portal-moonshot-d03.netlify.app
+portal-moonshot-d2q.netlify.app
 portal-moonshot-d32.netlify.app
 portal-moonshot-d37.netlify.app
 portal-moonshot-d53.netlify.app
 portal-moonshot-dfb.netlify.app
 portal-moonshot-dgc.netlify.app
+portal-moonshot-dk1.netlify.app
+portal-moonshot-dk2.netlify.app
 portal-moonshot-dkl.netlify.app
 portal-moonshot-dp2.netlify.app
 portal-moonshot-dp7.netlify.app
+portal-moonshot-dpt.netlify.app
+portal-moonshot-dpz.netlify.app
 portal-moonshot-dr4.netlify.app
 portal-moonshot-dsx.netlify.app
 portal-moonshot-dtv.netlify.app
 portal-moonshot-duh.netlify.app
 portal-moonshot-dw0.netlify.app
+portal-moonshot-e75.netlify.app
 portal-moonshot-e7p.netlify.app
+portal-moonshot-e81.netlify.app
 portal-moonshot-ean.netlify.app
 portal-moonshot-ebx.netlify.app
+portal-moonshot-ed4.netlify.app
 portal-moonshot-egw.netlify.app
 portal-moonshot-egx.netlify.app
+portal-moonshot-ehw.netlify.app
+portal-moonshot-emx.netlify.app
 portal-moonshot-eoo.netlify.app
 portal-moonshot-esj.netlify.app
+portal-moonshot-euo.netlify.app
 portal-moonshot-f3x.netlify.app
 portal-moonshot-f4t.netlify.app
+portal-moonshot-f4u.netlify.app
 portal-moonshot-fd4.netlify.app
 portal-moonshot-fja.netlify.app
 portal-moonshot-fku.netlify.app
+portal-moonshot-fnp.netlify.app
 portal-moonshot-fog.netlify.app
 portal-moonshot-fox.netlify.app
 portal-moonshot-frh.netlify.app
 portal-moonshot-fxg.netlify.app
+portal-moonshot-fxp.netlify.app
 portal-moonshot-fz4.netlify.app
 portal-moonshot-g36.netlify.app
 portal-moonshot-g4n.netlify.app
 portal-moonshot-gaj.netlify.app
+portal-moonshot-gb3.netlify.app
 portal-moonshot-gc5.netlify.app
 portal-moonshot-gcg.netlify.app
 portal-moonshot-ge9.netlify.app
 portal-moonshot-gf0.netlify.app
+portal-moonshot-gg7.netlify.app
 portal-moonshot-gjk.netlify.app
 portal-moonshot-gm3.netlify.app
 portal-moonshot-gzf.netlify.app
+portal-moonshot-h5l.netlify.app
 portal-moonshot-h5r.netlify.app
 portal-moonshot-h9f.netlify.app
+portal-moonshot-hfj.netlify.app
 portal-moonshot-hgw.netlify.app
 portal-moonshot-hht.netlify.app
 portal-moonshot-hjb.netlify.app
 portal-moonshot-hk3.netlify.app
 portal-moonshot-hl9.netlify.app
 portal-moonshot-hqj.netlify.app
+portal-moonshot-hro.netlify.app
 portal-moonshot-hu4.netlify.app
+portal-moonshot-hua.netlify.app
+portal-moonshot-huf.netlify.app
 portal-moonshot-hx5.netlify.app
 portal-moonshot-hya.netlify.app
+portal-moonshot-i1q.netlify.app
+portal-moonshot-i3x.netlify.app
 portal-moonshot-ibt.netlify.app
+portal-moonshot-if8.netlify.app
 portal-moonshot-ifl.netlify.app
 portal-moonshot-ihj.netlify.app
 portal-moonshot-imc.netlify.app
+portal-moonshot-ip0.netlify.app
 portal-moonshot-ipn.netlify.app
 portal-moonshot-is3.netlify.app
+portal-moonshot-ism.netlify.app
 portal-moonshot-ivg.netlify.app
 portal-moonshot-ixz.netlify.app
 portal-moonshot-j28.netlify.app
+portal-moonshot-j2c.netlify.app
 portal-moonshot-j6j.netlify.app
 portal-moonshot-j6v.netlify.app
 portal-moonshot-jbe.netlify.app
 portal-moonshot-jc4.netlify.app
 portal-moonshot-jd5.netlify.app
 portal-moonshot-je0.netlify.app
+portal-moonshot-jem.netlify.app
 portal-moonshot-jjp.netlify.app
 portal-moonshot-jk0.netlify.app
+portal-moonshot-jkt.netlify.app
+portal-moonshot-jnj.netlify.app
 portal-moonshot-jsr.netlify.app
 portal-moonshot-jsx.netlify.app
+portal-moonshot-jv0.netlify.app
 portal-moonshot-jz1.netlify.app
 portal-moonshot-k22.netlify.app
 portal-moonshot-ka4.netlify.app
+portal-moonshot-kdb.netlify.app
 portal-moonshot-kdc.netlify.app
+portal-moonshot-kf6.netlify.app
+portal-moonshot-kih.netlify.app
+portal-moonshot-kjm.netlify.app
 portal-moonshot-klu.netlify.app
+portal-moonshot-km0.netlify.app
+portal-moonshot-kxk.netlify.app
 portal-moonshot-ky6.netlify.app
+portal-moonshot-kyt.netlify.app
+portal-moonshot-kzq.netlify.app
 portal-moonshot-l2n.netlify.app
 portal-moonshot-l39.netlify.app
 portal-moonshot-l6z.netlify.app
@@ -313391,22 +313541,33 @@ portal-moonshot-lrj.netlify.app
 portal-moonshot-lv3.netlify.app
 portal-moonshot-m0e.netlify.app
 portal-moonshot-m15.netlify.app
+portal-moonshot-m33.netlify.app
 portal-moonshot-m36.netlify.app
 portal-moonshot-m7r.netlify.app
 portal-moonshot-m7v.netlify.app
 portal-moonshot-man.netlify.app
+portal-moonshot-mb8.netlify.app
+portal-moonshot-mgl.netlify.app
 portal-moonshot-mr4.netlify.app
+portal-moonshot-mvm.netlify.app
 portal-moonshot-mx3.netlify.app
+portal-moonshot-mxh.netlify.app
+portal-moonshot-mxr.netlify.app
 portal-moonshot-mze.netlify.app
+portal-moonshot-mzg.netlify.app
 portal-moonshot-mzv.netlify.app
 portal-moonshot-n26.netlify.app
 portal-moonshot-n8x.netlify.app
+portal-moonshot-na8.netlify.app
 portal-moonshot-nai.netlify.app
 portal-moonshot-ne7.netlify.app
 portal-moonshot-nea.netlify.app
+portal-moonshot-ney.netlify.app
 portal-moonshot-nfe.netlify.app
 portal-moonshot-nn1.netlify.app
 portal-moonshot-np6.netlify.app
+portal-moonshot-o0f.netlify.app
+portal-moonshot-o0m.netlify.app
 portal-moonshot-o3g.netlify.app
 portal-moonshot-o8a.netlify.app
 portal-moonshot-obw.netlify.app
@@ -313414,28 +313575,36 @@ portal-moonshot-oco.netlify.app
 portal-moonshot-oek.netlify.app
 portal-moonshot-oh9.netlify.app
 portal-moonshot-ok2.netlify.app
+portal-moonshot-okt.netlify.app
 portal-moonshot-orx.netlify.app
 portal-moonshot-ots.netlify.app
 portal-moonshot-oty.netlify.app
 portal-moonshot-otz.netlify.app
+portal-moonshot-ou5.netlify.app
+portal-moonshot-our.netlify.app
 portal-moonshot-owk.netlify.app
 portal-moonshot-oy1.netlify.app
 portal-moonshot-p0x.netlify.app
 portal-moonshot-p21.netlify.app
 portal-moonshot-p35.netlify.app
 portal-moonshot-p6u.netlify.app
+portal-moonshot-paa.netlify.app
+portal-moonshot-pas.netlify.app
 portal-moonshot-phx.netlify.app
 portal-moonshot-phz.netlify.app
 portal-moonshot-ps4.netlify.app
 portal-moonshot-pw8.netlify.app
+portal-moonshot-q00.netlify.app
 portal-moonshot-q39.netlify.app
 portal-moonshot-q8o.netlify.app
 portal-moonshot-qdr.netlify.app
 portal-moonshot-qe6.netlify.app
 portal-moonshot-qem.netlify.app
+portal-moonshot-qf2.netlify.app
 portal-moonshot-qlv.netlify.app
 portal-moonshot-qnt.netlify.app
 portal-moonshot-qnv.netlify.app
+portal-moonshot-qo3.netlify.app
 portal-moonshot-qt7.netlify.app
 portal-moonshot-qxy.netlify.app
 portal-moonshot-qya.netlify.app
@@ -313447,6 +313616,7 @@ portal-moonshot-r3x.netlify.app
 portal-moonshot-r6t.netlify.app
 portal-moonshot-r7z.netlify.app
 portal-moonshot-r84.netlify.app
+portal-moonshot-r9u.netlify.app
 portal-moonshot-raf.netlify.app
 portal-moonshot-rdk.netlify.app
 portal-moonshot-rhe.netlify.app
@@ -313457,14 +313627,19 @@ portal-moonshot-rp2.netlify.app
 portal-moonshot-rvh.netlify.app
 portal-moonshot-s4y.netlify.app
 portal-moonshot-s5r.netlify.app
+portal-moonshot-sgj.netlify.app
 portal-moonshot-slb.netlify.app
 portal-moonshot-swa.netlify.app
 portal-moonshot-t1t.netlify.app
 portal-moonshot-t44.netlify.app
 portal-moonshot-t6c.netlify.app
 portal-moonshot-t7i.netlify.app
+portal-moonshot-tg5.netlify.app
 portal-moonshot-tn0.netlify.app
+portal-moonshot-tne.netlify.app
+portal-moonshot-tov.netlify.app
 portal-moonshot-tr4.netlify.app
+portal-moonshot-trq.netlify.app
 portal-moonshot-tsd.netlify.app
 portal-moonshot-tyn.netlify.app
 portal-moonshot-u04.netlify.app
@@ -313472,7 +313647,11 @@ portal-moonshot-u4a.netlify.app
 portal-moonshot-uau.netlify.app
 portal-moonshot-uh6.netlify.app
 portal-moonshot-uhv.netlify.app
+portal-moonshot-uik.netlify.app
 portal-moonshot-uju.netlify.app
+portal-moonshot-ukw.netlify.app
+portal-moonshot-uor.netlify.app
+portal-moonshot-upr.netlify.app
 portal-moonshot-uw4.netlify.app
 portal-moonshot-uwk.netlify.app
 portal-moonshot-v0m.netlify.app
@@ -313490,18 +313669,25 @@ portal-moonshot-vqw.netlify.app
 portal-moonshot-vvh.netlify.app
 portal-moonshot-vyh.netlify.app
 portal-moonshot-w4c.netlify.app
+portal-moonshot-wai.netlify.app
+portal-moonshot-wcu.netlify.app
+portal-moonshot-wgv.netlify.app
 portal-moonshot-wi6.netlify.app
 portal-moonshot-wo8.netlify.app
 portal-moonshot-wsx.netlify.app
+portal-moonshot-wt8.netlify.app
 portal-moonshot-wty.netlify.app
 portal-moonshot-x0g.netlify.app
 portal-moonshot-x44.netlify.app
+portal-moonshot-x5f.netlify.app
 portal-moonshot-x9g.netlify.app
 portal-moonshot-xc1.netlify.app
 portal-moonshot-xdb.netlify.app
 portal-moonshot-xdd.netlify.app
 portal-moonshot-xi2.netlify.app
+portal-moonshot-xjm.netlify.app
 portal-moonshot-xof.netlify.app
+portal-moonshot-xqq.netlify.app
 portal-moonshot-xrn.netlify.app
 portal-moonshot-xt1.netlify.app
 portal-moonshot-xx9.netlify.app
@@ -313517,16 +313703,22 @@ portal-moonshot-yhr.netlify.app
 portal-moonshot-ypy.netlify.app
 portal-moonshot-yr6.netlify.app
 portal-moonshot-yri.netlify.app
+portal-moonshot-yvh.netlify.app
 portal-moonshot-yw9.netlify.app
+portal-moonshot-yy2.netlify.app
 portal-moonshot-yzd.netlify.app
 portal-moonshot-z08.netlify.app
 portal-moonshot-z3f.netlify.app
 portal-moonshot-z6j.netlify.app
 portal-moonshot-zah.netlify.app
 portal-moonshot-zbk.netlify.app
+portal-moonshot-zdy.netlify.app
 portal-moonshot-zh5.netlify.app
+portal-moonshot-zi1.netlify.app
+portal-moonshot-znf.netlify.app
 portal-moonshot-znr.netlify.app
 portal-moonshot-zpl.netlify.app
+portal-moonshot-zrq.netlify.app
 portal-moonshot-zt7.netlify.app
 portal-moonshot-zy4.netlify.app
 portal-moonshot.top
@@ -313566,6 +313758,7 @@ portal-otcdesks.cash
 portal-pandora.com
 portal-pandora.network
 portal-pandora.trading
+portal-papertrade.com
 portal-papertrade.xyz
 portal-parallel.xyz
 portal-peaq.com
@@ -314085,6 +314278,7 @@ portalretikfinance.pages.dev
 portalreview.online
 portalrpcnode.pages.dev
 portals-aave.com
+portals-aero.xyz
 portals-bridge.org
 portals-chainlink.com
 portals-claim.com
@@ -315637,7 +315831,6 @@ presale-scorpioncasino.pages.dev
 presale-scorploncaslno.com
 presale-sea.xyz
 presale-sealana-io.pages.dev
-presale-securywt.pages.dev
 presale-seedify.fund
 presale-sis.xyz
 presale-sky.com
@@ -316281,12 +316474,14 @@ pretsupermarket.com
 prevent-cb.com
 preview-blur.com
 preview-firelight.finance
+preview-fluid.finance
 preview-hyperfoundation.xyz
 preview-lighter.xyz
 preview-momentum-dev-eujxqx-oqqou6.d2.intrica.net
 preview-momentum-dev-eujxqx-zwcwyw.d2.intrica.net
 preview-oeth-sbmitchell-uxltpa.herokuapp.com
 preview-stonkfun.xyz
+preview-usefelix.xyz
 preview-usepaid.xyz
 preview.sosovalues.icu
 preview.twitter-eventt22.com
@@ -317310,6 +317505,7 @@ program-live.com
 program-morphsware.com
 program-pendle.com
 program-ripple.com
+program-ripple.pages.dev
 program-solana.com
 program-whiterock.com
 program.referral-arcus.com
@@ -318228,6 +318424,7 @@ proposal-3.click
 proposal-3jane.app
 proposal-3jane.com
 proposal-3jane.info
+proposal-3jane.live
 proposal-3jane.pages.dev
 proposal-3jane.xyz
 proposal-4.click
@@ -318291,6 +318488,8 @@ proposal-apyx.info
 proposal-apyx.xyz
 proposal-apyxfi.cloud
 proposal-apyxfi.com
+proposal-apyxfi.live
+proposal-apyxfi.pages.dev
 proposal-apyxfi.xyz
 proposal-arbdao.xyz
 proposal-arbfoundation.xyz
@@ -318384,6 +318583,7 @@ proposal-blur.top
 proposal-bonk.com
 proposal-bonus.xyz
 proposal-bonzo.finance
+proposal-bordrless.live
 proposal-boxes.com
 proposal-brewfamily.pro
 proposal-buttbrain.xyz
@@ -318436,6 +318636,7 @@ proposal-derive.icu
 proposal-derive.lat
 proposal-derive.pages.dev
 proposal-derive.top
+proposal-derive.xyz
 proposal-destra.com
 proposal-destra.network
 proposal-desyn.xyz
@@ -318496,6 +318697,7 @@ proposal-ethfi.live
 proposal-ethfi.xyz
 proposal-ethos.pages.dev
 proposal-ethos.top
+proposal-euler.com
 proposal-euler.org
 proposal-euler.xyz
 proposal-eulerfinance.com
@@ -318744,6 +318946,7 @@ proposal-navigator.net
 proposal-near.xyz
 proposal-netnet.capital
 proposal-netnet.cfd
+proposal-netnet.info
 proposal-netnet.lat
 proposal-netnet.live
 proposal-netnet.sbs
@@ -318795,7 +318998,9 @@ proposal-paal.org
 proposal-paal.xyz
 proposal-packages.com
 proposal-paper.cfd
+proposal-paper.trade
 proposal-paper.xyz
+proposal-paperstrategy.xyz
 proposal-papertrade.cfd
 proposal-papertrade.com
 proposal-papertrade.icu
@@ -318829,6 +319034,7 @@ proposal-polytrader.com
 proposal-pons.info
 proposal-ponsfamily.com
 proposal-ponsfamily.info
+proposal-ponsfamily.live
 proposal-ponsfamily.pro
 proposal-pools.info
 proposal-pools.trade
@@ -318871,6 +319077,8 @@ proposal-salt.fun
 proposal-sanctum.com
 proposal-sanctum.xyz
 proposal-saturn.credit
+proposal-saturncredit.live
+proposal-saturncredit.pages.dev
 proposal-scroll.xyz
 proposal-securitize.net
 proposal-sei.xyz
@@ -318887,6 +319095,8 @@ proposal-signalfamily.live
 proposal-silk.click
 proposal-skimaskdog.com
 proposal-skymoney.xyz
+proposal-slippy.live
+proposal-slippy.pages.dev
 proposal-soil.xyz
 proposal-soiv.com
 proposal-soivprotocol.com
@@ -319205,6 +319415,7 @@ proposals-degen.org
 proposals-degen.xyz
 proposals-degentoken.com
 proposals-degentoken.xyz
+proposals-derive.com
 proposals-derive.xyz
 proposals-destra.com
 proposals-destra.org
@@ -325071,6 +325282,7 @@ qqimi.com
 qqjnwj33jkb3jkn.cfd
 qql-art.com
 qql-art.nfts-premints.com
+qql-desk.com
 qql-love.art
 qql-mint.art
 qql-mintpass.org
@@ -327818,7 +328030,6 @@ rabby-wallet.v4-oi1a8.xyz
 rabby-wallets-spectacular-site.webflow.io
 rabby-wallets.app
 rabby-wallets.com
-rabby-web.app
 rabby-web.onhercules.app
 rabby-web3.org
 rabby-wllet-cdn.mystrikingly.com
@@ -331011,7 +331222,6 @@ raydiumcontracts.live
 raydiumdao.life
 raydiumdapp.webapplive.xyz
 raydiumdashboard.com
-raydiumdesktop.com
 raydiumdesktop.io
 raydiumdesktop.org
 raydiumdexnetlify.world
@@ -331084,7 +331294,6 @@ raydiun.lat
 raydiun.lol
 raydiun.network
 raydiun.one
-raydiun.pro
 raydiun.sbs
 raydiun.top
 raydiun.xyz
@@ -335691,6 +335900,8 @@ register-memeficlub.com
 register-memeland.org
 register-memes.fun
 register-memesol.live
+register-meridian.cfd
+register-meridian.cyou
 register-meritcircle.io
 register-merlinchain.co
 register-merlinchain.com
@@ -342113,6 +342324,7 @@ review-linkedin.com
 review-moonwell.finance
 review-pending-document-approval.us-east-1.linodeobjects.com
 review-rainbet.com
+review-rocketpool.info
 review-schawb.com
 review-sofi.com
 review-ticket-river.com
@@ -342255,6 +342467,7 @@ revoke-ambient.net
 revoke-ambientfinance.com
 revoke-ambients.finance
 revoke-antiaccess.vercel.app
+revoke-api-ledger.com
 revoke-app.com
 revoke-app.info
 revoke-approval.pages.dev
@@ -343212,6 +343425,7 @@ reward-degen.tips
 reward-degenbase.com
 reward-degentoken.xyz
 reward-demon.com
+reward-derive.xyz
 reward-desk-xrp.com
 reward-desk.app
 reward-desk.com
@@ -344728,6 +344942,7 @@ rewards-degen.tips
 rewards-degen.xyz
 rewards-degenin.xyz
 rewards-degods.com
+rewards-derive.xyz
 rewards-desk-xrp.com
 rewards-desk.app
 rewards-desyn.net
@@ -344815,6 +345030,7 @@ rewards-events-orbiter.xyz
 rewards-explorer.pages.dev
 rewards-extended.exchange
 rewards-ezeth.com
+rewards-fablesfi.com
 rewards-fablesfi.xyz
 rewards-familiars.family
 rewards-fantasy.com
@@ -344875,6 +345091,7 @@ rewards-flr.xyz
 rewards-fluid.app
 rewards-fluid.cloud
 rewards-fluid.com
+rewards-fluid.finance
 rewards-fluid.io
 rewards-fluid.lat
 rewards-fluid.net
@@ -346178,6 +346395,7 @@ rewards.dapp-lido.xyz
 rewards.dappad.click
 rewards.degen-frens.xyz
 rewards.degensbase.trade
+rewards.desk-ripple.com
 rewards.destrafi.co
 rewards.destrainetwork.icu
 rewards.dextoolse.com
@@ -347256,6 +347474,7 @@ ripple-pomotion.info
 ripple-pomotion.org
 ripple-pomotions.com
 ripple-program.org
+ripple-program.pages.dev
 ripple-project.com
 ripple-promo.online
 ripple-reserve.info
@@ -347766,6 +347985,7 @@ rlmnft.land
 rlne6.pro
 rloajnjtrd3wbvtqcg7nlkddc7ww3egwadzqletsca5f5lbnxf2q.arweave.net
 rlpocean.com
+rlpple-access.com
 rlpple-drops.top
 rlpple.com-news.info
 rls.stakingreward.cloud
@@ -353089,6 +353309,9 @@ sale-muradcoins.com
 sale-nft.store
 sale-optimism.pages.dev
 sale-orbition.xyz
+sale-paper.com
+sale-papertrade.app
+sale-papertrade.xyz
 sale-pump.fun
 sale-roost.com
 sale-satoshivm.io
@@ -363647,6 +363870,7 @@ simplestablecoinconect.com
 simplesvap.name
 simplesvap.trade
 simplesvvap.lol
+simplesvvap.xyz
 simplesvvvap.cyou
 simpleswa-p.com
 simpleswa-p.org
@@ -364663,6 +364887,17 @@ sitemv6db1ib12m7.cfd
 sitemv6dc06xrat5.cfd
 sitemv6ddifwqh7n.cfd
 sitemv6delcw3htw.cfd
+sitemvdfxm9vz0tu.cfd
+sitemvdm66xf9twc.cfd
+sitemvdm6v7knwdc.cfd
+sitemvdmrg6630i1.cfd
+sitemvdniggulris.cfd
+sitemvdpjq1hblzh.cfd
+sitemvewd4w0tngj.cfd
+sitemvewdltrli6k.cfd
+sitemvexbv467etb.cfd
+sitemvezjjowinq0.cfd
+sitemvf0bugtvsyb.cfd
 sitemyaps.project-altlayer.io
 sitemzapo.register-gtprotocol.io
 sitemzps.project-altlayer.io
@@ -368927,14 +369162,9 @@ sol-incinaretor.app
 sol-incineratcr.com
 sol-incinerate.com
 sol-incinerater.com
-sol-incinerator-14cba09w7-solslugs.vercel.app
 sol-incinerator-69byzux97-solslugs.vercel.app
-sol-incinerator-bf5mxun83-solslugs.vercel.app
-sol-incinerator-bhb37awtt-solslugs.vercel.app
-sol-incinerator-bntly7ta5-solslugs.vercel.app
 sol-incinerator-flfd5f8p9-solslugs.vercel.app
 sol-incinerator-hgurfn70p-solslugs.vercel.app
-sol-incinerator-ipp7qjepq-solslugs.vercel.app
 sol-incinerator-m7gxrgysz-solslugs.vercel.app
 sol-incinerator-o3hbp6sam-solslugs.vercel.app
 sol-incinerator-solslugs.vercel.app
@@ -371933,6 +372163,7 @@ soniclabs-com.pages.dev
 soniclabs-distribution.xyz
 soniclabs-en.firebaseapp.com
 soniclabs-en.web.app
+soniclabs-governance.xyz
 soniclabs-ia.web.app
 soniclabs-invite854215.xyz
 soniclabs-io.pages.dev
@@ -372691,7 +372922,6 @@ space.wf
 space20.pro
 space2x.su
 spaceandtime-checker.website
-spaceandtime.airsdropalerts.click
 spaceandtime.io.c0in.live
 spaceandtime.site
 spaceandtime.world
@@ -373008,6 +373238,7 @@ spark-claim.xyz
 spark-crypto.com
 spark-deposit.com
 spark-dex.icu
+spark-dex.top
 spark-dex.xyz
 spark-drop.com
 spark-energy.cfd
@@ -374739,7 +374970,6 @@ ssaserv.app.om-circle.it
 ssberkassa.site
 ssbhoite.com
 sscalping.com
-sscoinbasecdn.wixstudio.com
 ssd3.pro
 ssdd543.pages.dev
 ssdefendersnft.xyz
@@ -380852,7 +381082,6 @@ started-metamsk-io.wixstudio.com
 started-metamskapps.wixstudio.com
 started-metamskexten.wixstudio.com
 started-metamskhubs.wixstudio.com
-started-metamskio.wixstudio.com
 started-metamskkcdn.wixstudio.com
 started-metamskkio.wixstudio.com
 started-metamsskapps.wixstudio.com
@@ -391386,7 +391615,6 @@ t-suite.co.com
 t-sun.org
 t-sun.pro
 t-trezorsuite.com
-t-trust.wixstudio.com
 t-uphols-cdn.created.app
 t-validator.com
 t-wallet.live
@@ -401320,6 +401548,7 @@ tollvest.org
 tollylab.site
 tollylabs-allocation.xyz
 tollylabs-allocations.xyz
+tollylabs-checkers.xyz
 tollylabs-proposal.xyz
 tollylabs.info
 tollylabs.pro
@@ -404445,6 +404674,7 @@ treaderjoxyz.io-v6.icu
 treadfi-allocations.xyz
 treadfi-checkers.xyz
 treadfi-portals.xyz
+treadfi-proposal.live
 treadfi-proposal.xyz
 treadfi-reward.xyz
 treadfi-vote.xyz
@@ -407760,7 +407990,6 @@ trrezzor-io-start.pages.dev
 trrezzorr-logiin.square.site
 trrfg47t65erdf.pro
 trrstwallet.pages.dev
-trrust-ext.wixstudio.com
 trrust-extensionn.wixstudio.com
 trrust-extnsion.wixstudio.com
 trrust-wet-wallet.pages.dev
@@ -407775,7 +408004,6 @@ trsity.com
 trsqh.com
 trsrylab.info
 trssyutwlltt.webflow.io
-trst-extension.wixstudio.com
 trst-wallet-app.pages.dev
 trst-wallet.framer.ai
 trstcard.xyz
@@ -409242,6 +409470,7 @@ trustcardz.xyz
 trustcarrd.icu
 trustcashless.com
 trustccard.com
+trustcdn-us.framer.website
 trustcgstaking.info
 trustchain-multipad.com
 trustchain.cards
@@ -410529,7 +410758,6 @@ trustwallet.nftsmakersplace.com
 trustwallet.ong
 trustwallet.onl
 trustwallet.ooo
-trustwallet.org-cards.app
 trustwallet.org.ph
 trustwallet.partners
 trustwallet.ph
@@ -411348,7 +411576,6 @@ tryrlngal.org
 trysity.info
 tryslty.link
 tryst-infu.link
-tryst-is-walaat.gitbook.io
 tryst-support.link
 trystakeland.xyz
 trystantoken.xyz
@@ -411913,7 +412140,6 @@ turnoverdao.com
 turnoverdaoteam.pro
 turnstilede.pages.dev
 turnvalueboarddefy.pages.dev
-tursetapps.wixstudio.com
 turst-wallet.cam
 turstwallet.club
 turtevault.xyz
@@ -415418,6 +415644,7 @@ uniswap.app.br.com
 uniswap.app.com.kz
 uniswap.app.org.kz
 uniswap.apps.org.kz
+uniswap.at
 uniswap.avayas.com
 uniswap.bike
 uniswap.bio
@@ -417783,6 +418010,7 @@ us-05web-zoom.us
 us-05web.com
 us-05web.us
 us-06webzoom.us
+us-07web.us
 us-across-protocol.stakingreward.host
 us-across-protocols.stakingreward.host
 us-adidas.com
@@ -418008,7 +418236,6 @@ us-robihood.com
 us-robinnhoods.wixstudio.com
 us-roobet.com
 us-safepal.org
-us-scallop.stakingsreward.club
 us-scallops.stakingsreward.club
 us-scr.stakingreward.cloud
 us-scrolls.stakingreward.cloud
@@ -419991,6 +420218,7 @@ usefelix.app
 usefelix.cam
 usefelix.cloud
 usefelix.com
+usefelix.digital
 usefelix.events
 usefelix.finance
 usefelix.icu
@@ -422934,7 +423162,6 @@ variational.lol
 variational.omni-challenge.com
 variational.sa.com
 variational.site
-variational.stationhq.xyz
 variational.today
 variational.top
 variational.us
@@ -427725,6 +427952,7 @@ vote-definetwork.com
 vote-definetwork.net
 vote-degods.com
 vote-derive.club
+vote-derive.xyz
 vote-destra.network
 vote-dexscreen.com
 vote-dexscreener.fun
@@ -427993,6 +428221,7 @@ vote-hydrex.lat
 vote-hydrex.life
 vote-hydrexapp.cyou
 vote-hylo.xyz
+vote-hype.xyz
 vote-hyperbeat.icu
 vote-hyperbeat.xyz
 vote-hyperfoundation.app
@@ -428168,6 +428397,7 @@ vote-jup-rewards.com
 vote-jup.com
 vote-jup.pages.dev
 vote-jurassic.xyz
+vote-justnetwork.com
 vote-kaia.co
 vote-kaiachain.info
 vote-kaito.app
@@ -428310,7 +428540,6 @@ vote-mega.com
 vote-mega.eth.limo
 vote-megaeth.cc
 vote-megaeth.info
-vote-megaeth.net
 vote-megaeth.xyz
 vote-megafi.com
 vote-megr.lol
@@ -430429,6 +430658,7 @@ votes-3jane.xyz
 votes-4meme.com
 votes-aav.com
 votes-aave.org
+votes-aero.xyz
 votes-aerodrome.app
 votes-aerodrome.com
 votes-aerodromefi.com
@@ -431176,6 +431406,8 @@ voting-hashai.app
 voting-hashai.com
 voting-hashai.net
 voting-hl-eco.xyz
+voting-hookr.fun
+voting-hookr.pages.dev
 voting-hyperlend.app
 voting-hyperlend.com
 voting-hyperlend.finance
@@ -431376,6 +431608,7 @@ voting-renzoprotocoi.com
 voting-renzoprotocol.com
 voting-riverinc.com
 voting-robinhood.live
+voting-rocketdash.com
 voting-rocketpool.com
 voting-rocketpool.net
 voting-rocketpool.xyz
@@ -431424,6 +431657,8 @@ voting-swellnetwork.net
 voting-tea.com
 voting-tea.net
 voting-telco.in
+voting-telcoin.cfd
+voting-telcoin.cyou
 voting-tempo.xyz
 voting-theindexfinance.asia
 voting-theindexfinance.cfd
@@ -439421,7 +439656,6 @@ web3-trezor.org
 web3-tru-dt.com
 web3-trust.top
 web3-trustbackups.com
-web3-trustt.wixstudio.com
 web3-trustvaliadtor.com
 web3-trustwallet.cfd
 web3-trustwallet.org
@@ -441670,7 +441904,6 @@ webintro-metamask.wixstudio.com
 webintropage.wixstudio.com
 webio-base-extension.wixstudio.com
 webio-jcxxlibarty.wixstudio.com
-webio-meatamsk.wixstudio.com
 webio-rabbyapps.wixstudio.com
 webio-rabbycdn.wixstudio.com
 webio-trustextension.wixstudio.com
@@ -477283,6 +477516,7 @@ xcryptoby.com
 xcryptod.com
 xcryptonex.com
 xcryptos.top
+xcsq.me
 xct.overdezuki.fun
 xctpliquid.org
 xcube.online
@@ -479282,6 +479516,7 @@ xn--revokcash-f4a.com
 xn--revoke-unswap-cbc.app
 xn--revoke-unswap-cbc.com
 xn--revokecsh-c3a.com
+xn--revoks-9xa.online
 xn--rezor-6db.net
 xn--rezor-jeb.net
 xn--rezr-pj5a3z.com
@@ -479948,6 +480183,7 @@ xrp-dist.web.app
 xrp-drop.com
 xrp-drop.pages.dev
 xrp-drop.web.app
+xrp-ecosystem.org
 xrp-escrows.com
 xrp-event.com
 xrp-event.info
@@ -480134,6 +480370,7 @@ xrpairdrop.net
 xrpairdrop.vercel.app
 xrpairdrop2025.com
 xrpairdrop2025.net
+xrpallocation.app
 xrpama.com
 xrpama.net
 xrparmytoken.top
@@ -480271,7 +480508,9 @@ xrpl-batch.xyz
 xrpl-beta.xyz
 xrpl-boost.xyz
 xrpl-check.xyz
+xrpl-checker.com
 xrpl-checker.xyz
+xrpl-claim.com
 xrpl-claim.live
 xrpl-claim.xyz
 xrpl-claims.live
@@ -480309,7 +480548,9 @@ xrpl-flare.live
 xrpl-gain.live
 xrpl-gain.xyz
 xrpl-genesis.live
+xrpl-get.com
 xrpl-gov.xyz
+xrpl-grant.com
 xrpl-invite.com
 xrpl-join.live
 xrpl-join.xyz
@@ -481919,7 +482160,6 @@ yieldbasis-q3.com
 yieldbasis-redirect-34512.pages.dev
 yieldbasis-redirect-38451.pages.dev
 yieldbasis-redirect-85945.pages.dev
-yieldbasis-redirect-90431.pages.dev
 yieldbasis-vote.com
 yieldbasis.events
 yieldbasis.global
@@ -481992,7 +482232,6 @@ yieldnestpoint.xyz
 yieldnexora.com
 yieldpointera.online
 yieldpools.xyz
-yields-basis.airsdropalerts.click
 yields-basis.com
 yields-veda.xyz
 yields24.io
@@ -482498,7 +482737,6 @@ youtubevanced.gg
 youtubevideos.link
 yox09.pro
 yoyo-market.click
-yoyovision.io
 yp7q.pro
 yp7y2p.cc
 ypa.overdezuki.fun
